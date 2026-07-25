@@ -2,7 +2,7 @@ import { doctor } from "@/lib/site";
 
 export default function CTASection({
   heading = "Ready to talk about your hip or knee pain?",
-  subheading = "Schedule a consultation with Dr. Sam Vojdani at Total Joint Specialists in Midtown Atlanta or Sandy Springs.",
+  subheading = "Schedule a consultation with Dr. Sam Vojdani.",
 }: {
   heading?: string;
   subheading?: string;

@@ -177,6 +177,169 @@ export const serviceAreas: ServiceArea[] = [
   },
 ];
 
+serviceAreas.push(
+  {
+    slug: "peachtree-corners",
+    city: "Peachtree Corners",
+    metaDescription:
+      "Hip and knee replacement for Peachtree Corners, GA — Dr. Sam Vojdani, a Peachtree Corners native, offers anterior hip and robotic knee replacement nearby.",
+    nearestOffice: "sandy-springs",
+    nearestOfficeLabel: "Sandy Springs office (via GA-141 or I-285)",
+    driveNote:
+      "From Peachtree Corners, the Sandy Springs office on Hammond Drive is about 20 minutes — take Peachtree Industrial toward I-285 West, or GA-141 to Peachtree Dunwoody, exiting at Hammond Drive.",
+    intro: [
+      "Peachtree Corners holds a special place in this practice: Dr. Vojdani was born and raised here before his path led through Georgia Tech, the Medical College of Georgia, and fellowship training at Columbia University. Today he cares for hip and knee patients from his hometown at the nearby Sandy Springs office.",
+      "The practice covers the full range of hip and knee replacement — minimally invasive anterior hip replacement, quadriceps-sparing and robotic-assisted knee replacement, partial knee replacement, same-day outpatient surgery, and complex revision reconstruction.",
+    ],
+    localNote:
+      "For Peachtree Corners patients, consultations, surgery, and follow-ups all stay within a familiar 20-minute radius — with surgery performed at Total Joint Surgery Center – Atlanta, Northside Hospital Atlanta, or Meridian Mark Ambulatory Surgery Center.",
+  },
+  {
+    slug: "duluth",
+    city: "Duluth",
+    metaDescription:
+      "Hip and knee replacement for Duluth, GA residents — Dr. Sam Vojdani, a Duluth High School graduate, offers anterior hip and robotic knee replacement.",
+    nearestOffice: "sandy-springs",
+    nearestOfficeLabel: "Sandy Springs office (via Peachtree Industrial or I-85/I-285)",
+    driveNote:
+      "From Duluth, reach the Sandy Springs office in roughly 25–30 minutes via Peachtree Industrial Boulevard toward I-285 West, or I-85 South to I-285 West, exiting at GA-400 North / Hammond Drive.",
+    intro: [
+      "Duluth is where Dr. Vojdani graduated high school before earning top honors at Georgia Tech and the Medical College of Georgia — and Duluth-area patients still make up a meaningful part of his hip and knee replacement practice today.",
+      "Care spans the full spectrum: evaluation and non-surgical arthritis management, minimally invasive anterior hip replacement, quadriceps-sparing and robotic-assisted knee replacement, partial knee replacement, outpatient same-day surgery, and revision of painful existing replacements.",
+    ],
+    localNote:
+      "Many Duluth patients qualify for same-day outpatient joint replacement — surgery in the morning, recovery at home in Gwinnett by evening, with follow-up visits an easy drive around the Perimeter.",
+  },
+  {
+    slug: "norcross",
+    city: "Norcross",
+    metaDescription:
+      "Hip and knee replacement for Norcross, GA residents — Dr. Sam Vojdani offers anterior hip replacement and robotic knee replacement minutes away in Sandy Springs.",
+    nearestOffice: "sandy-springs",
+    nearestOfficeLabel: "Sandy Springs office (about 20 minutes via I-285)",
+    driveNote:
+      "From Norcross, the Sandy Springs office is a straightforward 20-minute drive: I-285 West to GA-400 North, Exit 5 at Hammond Drive — or surface streets via Peachtree Industrial and Windsor Parkway.",
+    intro: [
+      "Norcross residents dealing with hip or knee arthritis can reach fellowship-trained joint replacement care in about twenty minutes — without fighting downtown traffic. Dr. Vojdani sees patients at the Sandy Springs office just off GA-400.",
+      "His practice is dedicated exclusively to hip and knee replacement: anterior approach hips that spare muscle, quadriceps-sparing and robotic-assisted knees, partial knee replacement, same-day outpatient programs, and complex revision surgery.",
+    ],
+    localNote:
+      "Gwinnett patients often pair a Sandy Springs consultation with imaging the same day, and surgery is performed at Total Joint Surgery Center – Atlanta, Northside Hospital Atlanta, or Meridian Mark Ambulatory Surgery Center — all clustered near GA-400.",
+  },
+  {
+    slug: "suwanee",
+    city: "Suwanee",
+    metaDescription:
+      "Hip and knee replacement for Suwanee, GA residents — Dr. Sam Vojdani offers anterior hip replacement, robotic knee replacement, and same-day joint replacement.",
+    nearestOffice: "sandy-springs",
+    nearestOfficeLabel: "Sandy Springs office (via I-85 or Peachtree Industrial)",
+    driveNote:
+      "From Suwanee, plan on 30–35 minutes to the Sandy Springs office: I-85 South to I-285 West to GA-400 North Exit 5, or Peachtree Industrial Boulevard south through Berkeley Lake and Dunwoody.",
+    intro: [
+      "Suwanee's active, family-centered community is exactly who joint replacement is meant to serve — parents and grandparents who want to keep up with greenway walks, swim meets, and travel without planning around hip or knee pain.",
+      "Dr. Vojdani provides the full range of care: honest evaluation (including when surgery is not yet warranted), minimally invasive anterior hip replacement, quadriceps-sparing and robotic-assisted knee replacement, partial knee replacement, outpatient same-day surgery, and revision reconstruction.",
+    ],
+    localNote:
+      "Suwanee patients frequently choose the same-day outpatient pathway — surgery at a dedicated surgery center in the morning and home to Gwinnett by evening, with the Suwanee Creek Greenway waiting when walking mileage rebuilds.",
+  },
+  {
+    slug: "lawrenceville",
+    city: "Lawrenceville",
+    metaDescription:
+      "Hip and knee replacement for Lawrenceville, GA residents — Dr. Sam Vojdani offers anterior hip replacement and robotic knee replacement in metro Atlanta.",
+    nearestOffice: "sandy-springs",
+    nearestOfficeLabel: "Sandy Springs office (via GA-316 and I-85)",
+    driveNote:
+      "From Lawrenceville, the Sandy Springs office is about 35 minutes: GA-316 West to I-85 South, then I-285 West to GA-400 North, exiting at Hammond Drive.",
+    intro: [
+      "Lawrenceville and central Gwinnett residents weighing hip or knee replacement can consult with Dr. Vojdani — a fellowship-trained adult reconstruction specialist whose practice is devoted entirely to hip and knee replacement.",
+      "Options span non-surgical arthritis care, minimally invasive anterior hip replacement, quadriceps-sparing and robotic-assisted total knee replacement, partial knee replacement for single-compartment arthritis, same-day outpatient surgery, and complex revision of painful existing implants.",
+    ],
+    localNote:
+      "For Lawrenceville patients, the trip down GA-316 is usually worth making once for the consultation and once for surgery — much of the follow-up rhythm (therapy exercises, progress tracking) happens close to home, with office visits scheduled at sensible intervals.",
+  },
+  {
+    slug: "cumming",
+    city: "Cumming & Forsyth County",
+    metaDescription:
+      "Hip and knee replacement for Cumming and Forsyth County, GA — Dr. Sam Vojdani offers anterior hip replacement and robotic knee replacement down GA-400.",
+    nearestOffice: "sandy-springs",
+    nearestOfficeLabel: "Sandy Springs office (straight down GA-400)",
+    driveNote:
+      "From Cumming, the Sandy Springs office is a direct 30-minute run down GA-400 South to Exit 5 (Sandy Springs), with the office just off Hammond Drive.",
+    intro: [
+      "Forsyth County is one of Georgia's fastest-growing communities, and its active residents put real demands on their hips and knees. Dr. Vojdani offers Cumming-area patients fellowship-trained joint replacement care one straight highway run away.",
+      "The practice covers minimally invasive anterior hip replacement, quadriceps-sparing and robotic-assisted knee replacement, partial knee replacement, outpatient same-day joint replacement, and complex revision reconstruction — plus honest guidance when surgery isn't yet the right step.",
+    ],
+    localNote:
+      "GA-400 makes the logistics simple for Forsyth patients: consultation and follow-ups at Sandy Springs, surgery at Total Joint Surgery Center – Atlanta, Northside Hospital Atlanta, or Meridian Mark Ambulatory Surgery Center — no downtown driving at any step.",
+  },
+  {
+    slug: "decatur",
+    city: "Decatur",
+    metaDescription:
+      "Hip and knee replacement for Decatur, GA residents — Dr. Sam Vojdani offers anterior hip replacement and robotic knee replacement in nearby Midtown Atlanta.",
+    nearestOffice: "midtown-atlanta",
+    nearestOfficeLabel: "Midtown Atlanta office (about 15–20 minutes west)",
+    driveNote:
+      "From Decatur, the Midtown office at 1110 West Peachtree Street is roughly 15–20 minutes via Ponce de Leon Avenue or North Avenue, with MARTA an easy alternative — the office is steps from the Arts Center station.",
+    intro: [
+      "Decatur residents have convenient in-town access to fellowship-trained hip and knee replacement care: Dr. Vojdani's Midtown office is a short drive — or a simple MARTA ride — from the square.",
+      "His practice is dedicated exclusively to hip and knee replacement: minimally invasive anterior hip replacement, quadriceps-sparing and robotic-assisted knee replacement, partial knee replacement, same-day outpatient surgery, and revision surgery for previously replaced joints.",
+    ],
+    localNote:
+      "Decatur's walkable lifestyle is worth protecting — restaurants on the square, the PATH trails, festivals on the lawn. Restoring comfortable walking is precisely what a well-done hip or knee replacement delivers.",
+  },
+  {
+    slug: "woodstock",
+    city: "Woodstock",
+    metaDescription:
+      "Hip and knee replacement for Woodstock, GA residents — Dr. Sam Vojdani offers anterior hip replacement and robotic knee replacement in metro Atlanta.",
+    nearestOffice: "sandy-springs",
+    nearestOfficeLabel: "Sandy Springs office (via I-575 and I-285)",
+    driveNote:
+      "From Woodstock, plan on about 35 minutes: I-575 South to I-75 South, then I-285 East to Roswell Road or GA-400, exiting near Hammond Drive.",
+    intro: [
+      "Woodstock and south Cherokee residents can bring their hip and knee arthritis questions to a surgeon whose entire practice is joint replacement — with the drive to Sandy Springs often shorter than crossing metro traffic to other specialty centers.",
+      "Dr. Vojdani offers minimally invasive anterior hip replacement, quadriceps-sparing and robotic-assisted knee replacement, partial knee replacement, outpatient same-day surgery, and complex revision reconstruction, alongside non-surgical arthritis care.",
+    ],
+    localNote:
+      "Woodstock's trail network — Noonday Creek, Olde Rope Mill — is a favorite goal for recovering patients. Most walk unassisted within weeks of surgery and return to trail mileage over the following months.",
+  },
+  {
+    slug: "kennesaw",
+    city: "Kennesaw & Acworth",
+    metaDescription:
+      "Hip and knee replacement for Kennesaw and Acworth, GA — Dr. Sam Vojdani offers anterior hip replacement and robotic knee replacement in metro Atlanta.",
+    nearestOffice: "sandy-springs",
+    nearestOfficeLabel: "Sandy Springs office (via I-75 and I-285)",
+    driveNote:
+      "From Kennesaw or Acworth, the Sandy Springs office is roughly 35 minutes: I-75 South to I-285 East, exiting at Riverside Drive or GA-400 toward Hammond Drive.",
+    intro: [
+      "Kennesaw and Acworth residents considering hip or knee replacement can consult with Dr. Vojdani — board-certified, Columbia fellowship-trained, and focused exclusively on hip and knee reconstruction.",
+      "The practice offers minimally invasive anterior hip replacement, quadriceps-sparing and robotic-assisted knee replacement, partial knee replacement for isolated arthritis, same-day outpatient surgery for qualified candidates, and revision surgery for implants placed elsewhere.",
+    ],
+    localNote:
+      "From Kennesaw Mountain hikes to Lake Allatoona weekends, northwest-metro life rewards healthy joints. Patients who come to surgery active and prepared tend to reclaim those activities fastest — and same-day outpatient pathways keep recovery at home.",
+  },
+  {
+    slug: "milton",
+    city: "Milton",
+    metaDescription:
+      "Hip and knee replacement for Milton, GA residents — Dr. Sam Vojdani offers anterior hip replacement and robotic knee replacement down GA-400.",
+    nearestOffice: "sandy-springs",
+    nearestOfficeLabel: "Sandy Springs office (down GA-400)",
+    driveNote:
+      "From Milton, take GA-400 South from Windward Parkway or McFarland Road to Exit 5 (Sandy Springs) — about 25–30 minutes to the Hammond Drive office.",
+    intro: [
+      "Milton's equestrian farms, golf communities, and trail systems make it one of the metro's most active places to live — and joint pain shouldn't be what slows that down. Dr. Vojdani cares for Milton patients at the Sandy Springs office, a straight run down GA-400.",
+      "His practice covers the full range of hip and knee replacement: minimally invasive anterior hips, quadriceps-sparing and robotic-assisted knees, partial knee replacement, outpatient same-day surgery, and complex revision reconstruction.",
+    ],
+    localNote:
+      "Riders and golfers ask the same question: when can I get back to it? Most patients return to low-impact recreation in the two-to-three-month window with surgeon clearance — and the consultation is where that timeline gets personalized.",
+  }
+);
+
 export function getArea(slug: string): ServiceArea | undefined {
   return serviceAreas.find((a) => a.slug === slug);
 }
