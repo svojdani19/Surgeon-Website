@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { services, doctor, siteUrl } from "@/lib/site";
+import { services, serviceImage, doctor, siteUrl } from "@/lib/site";
 import { articles } from "@/lib/articles";
 
 export function generateStaticParams() {
@@ -65,18 +66,30 @@ export default async function ServiceDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(procedureSchema) }}
       />
       <section className="bg-brand-50 py-14">
-        <Container>
-          <Breadcrumbs
-            crumbs={[
-              { name: "Home", href: "/" },
-              { name: "Hip & Knee Care", href: "/services" },
-              { name: service.shortName, href: `/services/${service.slug}` },
-            ]}
-          />
-          <h1 className="mt-3 font-serif text-4xl font-bold text-brand-950">
-            {service.name}
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg text-brand-800">{service.summary}</p>
+        <Container className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_400px] lg:items-center">
+          <div>
+            <Breadcrumbs
+              crumbs={[
+                { name: "Home", href: "/" },
+                { name: "Hip & Knee Care", href: "/services" },
+                { name: service.shortName, href: `/services/${service.slug}` },
+              ]}
+            />
+            <h1 className="mt-3 font-serif text-4xl font-bold text-brand-950">
+              {service.name}
+            </h1>
+            <p className="mt-4 max-w-2xl text-lg text-brand-800">{service.summary}</p>
+          </div>
+          <div className="relative h-56 w-full overflow-hidden rounded-2xl shadow-lg lg:h-64">
+            <Image
+              src={serviceImage(service.slug).src}
+              alt={serviceImage(service.slug).alt}
+              fill
+              priority
+              sizes="(max-width: 1024px) 90vw, 400px"
+              className="object-cover"
+            />
+          </div>
         </Container>
       </section>
 

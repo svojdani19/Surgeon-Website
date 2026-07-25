@@ -158,6 +158,28 @@ export type Service = {
   body: string[];
 };
 
+/** Photo path + alt text for each service (files in /public/images/services). */
+export function serviceImage(slug: string): { src: string; alt: string } {
+  const alts: Record<string, string> = {
+    "anterior-hip-replacement":
+      "Active senior couple walking comfortably together on a park path",
+    "total-knee-replacement":
+      "Physician reviewing a knee X-ray during a patient consultation",
+    "partial-knee-replacement":
+      "Clinician examining and treating a patient's knee",
+    "robotic-assisted-surgery":
+      "Surgical team working under lights in a modern operating room",
+    "outpatient-same-day-joint-replacement":
+      "Happy senior couple walking outdoors, enjoying an active day",
+    "revision-joint-replacement":
+      "Medical professional closely examining a leg X-ray",
+  };
+  return {
+    src: `/images/services/${slug}.jpg`,
+    alt: alts[slug] ?? "Hip and knee replacement care",
+  };
+}
+
 export const services: Service[] = [
   {
     slug: "anterior-hip-replacement",
