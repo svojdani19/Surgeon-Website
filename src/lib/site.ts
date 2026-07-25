@@ -147,6 +147,49 @@ export const locations: Location[] = [
   },
 ];
 
+/** Facilities where Dr. Vojdani performs surgery (distinct from clinic offices). */
+export const surgeryFacilities: {
+  name: string;
+  type: string;
+  addressLine1: string;
+  city: string;
+  state: string;
+  zip: string;
+  mapQuery: string;
+  note: string;
+}[] = [
+  {
+    name: "Total Joint Surgery Center – Atlanta",
+    type: "Dedicated Joint Replacement Surgery Center",
+    addressLine1: "1150 Hammond Drive, Suite 600",
+    city: "Sandy Springs",
+    state: "GA",
+    zip: "30328",
+    mapQuery: "Total Joint Surgery Center 1150 Hammond Drive Suite 600 Sandy Springs GA",
+    note: "A surgery center built exclusively for hip and knee replacement — same building as the Sandy Springs office, and home to many of Dr. Vojdani's same-day outpatient procedures.",
+  },
+  {
+    name: "Northside Hospital Atlanta",
+    type: "Hospital",
+    addressLine1: "1000 Johnson Ferry Road NE",
+    city: "Atlanta",
+    state: "GA",
+    zip: "30342",
+    mapQuery: "Northside Hospital Atlanta 1000 Johnson Ferry Road NE Atlanta GA",
+    note: "Full-service hospital setting for patients whose health history or procedure complexity calls for hospital-based surgery and overnight care.",
+  },
+  {
+    name: "Meridian Mark Ambulatory Surgery Center",
+    type: "Outpatient Surgery Center",
+    addressLine1: "5445 Meridian Mark Road NE",
+    city: "Atlanta",
+    state: "GA",
+    zip: "30342",
+    mapQuery: "Northside Meridian Mark Outpatient Surgery Center 5445 Meridian Mark Road NE Atlanta GA",
+    note: "Northside's outpatient surgery center near Pill Hill — another convenient same-day surgery option minutes from the Sandy Springs office.",
+  },
+];
+
 export type Service = {
   slug: string;
   name: string;

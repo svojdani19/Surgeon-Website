@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
-import { locations } from "@/lib/site";
+import { locations, surgeryFacilities } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Office Locations | Midtown Atlanta & Sandy Springs, GA",
@@ -53,6 +53,48 @@ export default function LocationsPage() {
               </div>
             </div>
           ))}
+        </Container>
+      </section>
+      <section className="bg-brand-50 py-16">
+        <Container>
+          <h2 className="font-serif text-3xl font-bold text-brand-950">
+            Where Surgery Is Performed
+          </h2>
+          <p className="mt-3 max-w-2xl text-brand-700">
+            Depending on your procedure and health profile, Dr. Vojdani
+            performs surgery at one of three facilities — from dedicated
+            same-day joint replacement surgery centers to a full-service
+            hospital.
+          </p>
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
+            {surgeryFacilities.map((f) => (
+              <div
+                key={f.name}
+                className="flex flex-col rounded-xl border border-brand-100 bg-white p-6"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-brand-500">
+                  {f.type}
+                </p>
+                <h3 className="mt-1 font-serif text-xl font-semibold text-brand-900">
+                  {f.name}
+                </h3>
+                <p className="mt-2 text-brand-700">
+                  {f.addressLine1}
+                  <br />
+                  {f.city}, {f.state} {f.zip}
+                </p>
+                <p className="mt-3 flex-1 text-sm text-brand-700">{f.note}</p>
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(f.mapQuery)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block text-sm font-semibold text-brand-600 hover:underline"
+                >
+                  Get directions →
+                </a>
+              </div>
+            ))}
+          </div>
         </Container>
       </section>
       <CTASection />
