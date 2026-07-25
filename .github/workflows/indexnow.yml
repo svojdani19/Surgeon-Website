@@ -1,0 +1,25 @@
+name: IndexNow ping on deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Vercel deploy to go live
+        run: sleep 150
+
+      - name: Ping IndexNow with all sitemap URLs
+        run: |
+          SITE="https://www.georgiahipandknee.com"
+          KEY="17cf5a718540526c50468517beae2b14"
+          URLS=$(curl -s "$SITE/sitemap.xml" | grep -oE '<loc>[^<]+</loc>' | sed -E 's|</?loc>||g')
+          COUNT=$(echo "$URLS" | wc -l)
+          echo "Pinging IndexNow with $COUNT URLs"
+          JSON_URLS=$(echo "$URLS" | sed 's/^/"/;s/$/",/' | tr -d '\n' | sed 's/,$//')
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"www.georgiahipandknee.com\",\"key\":\"$KEY\",\"keyLocation\":\"$SITE/$KEY.txt\",\"urlList\":[$JSON_URLS]}" \
+            -w "\nHTTP %{http_code}\n"
