@@ -23,6 +23,39 @@ export const doctor = {
   googleRating: "5.0",
 };
 
+/**
+ * Verbatim patient reviews from public profiles — exact text, real dates,
+ * honest source attribution. Do not edit quotes or invent new ones.
+ */
+export const testimonials: {
+  quote: string;
+  source: string;
+  date: string;
+  url: string;
+}[] = [
+  {
+    quote:
+      "I never felt rushed!! He LISTENED to what I had to say and LISTENED to my answers to HIS questions!!",
+    source: "Healthgrades patient review",
+    date: "Aug 2023",
+    url: "https://www.healthgrades.com/physician/dr-sam-vojdani-xylp2pt",
+  },
+  {
+    quote:
+      "After 3 others couldn't or incorrectly diagnosed my knee pain, Dr. Vojdani discovered the cause.",
+    source: "Healthgrades patient review",
+    date: "Jul 2022",
+    url: "https://www.healthgrades.com/physician/dr-sam-vojdani-xylp2pt",
+  },
+  {
+    quote:
+      "I felt Dr. Vojdani and his team never left my side, well after I had left the hospital.",
+    source: "Healthgrades patient review",
+    date: "Jan 2021",
+    url: "https://www.healthgrades.com/physician/dr-sam-vojdani-xylp2pt",
+  },
+];
+
 export type Location = {
   slug: string;
   name: string;
