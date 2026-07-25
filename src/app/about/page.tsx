@@ -13,19 +13,21 @@ export const metadata: Metadata = {
 
 const education = [
   "American Board of Orthopedic Surgery Certification",
-  "Orthopedic Fellowship: Adult Reconstruction, Columbia University, New York",
-  "Categorical Residency: Orthopedic Surgery, Stony Brook University Hospital, New York",
-  "Doctor of Medicine, Medical College of Georgia, Georgia Regents University",
-  "Biology & Biomedical Engineering, Georgia Institute of Technology",
+  "Fellowship: Frank E. Stinchfield Adult Reconstruction Fellowship, Columbia University, New York",
+  "Residency: Orthopedic Surgery, Stony Brook University Hospital, New York (Chief Resident)",
+  "Doctor of Medicine, Medical College of Georgia (graduated top of class)",
+  "Biology & Biomedical Engineering, Georgia Institute of Technology (Stamps President's Scholar, highest honors)",
 ];
 
 const distinctions = [
+  "Castle Connolly Top Doctor (2024–2026)",
   "Alpha Omega Alpha Honor Society",
-  "Gold Humanism Honor Society",
+  "Gold Humanism Award",
+  "Most Outstanding Research Award, Residency",
+  "Top 1% in Patient Satisfaction, Care & Likelihood to Recommend",
   "Humanitarian Committee, American Association of Hip & Knee Surgeons",
   "Member, American Academy of Orthopaedic Surgery",
   "Georgia Orthopedic Society",
-  "Castle Connolly Top Doctor",
 ];
 
 export default function AboutPage() {
@@ -54,28 +56,50 @@ export default function AboutPage() {
             <p className="mt-1 text-lg text-brand-700">{doctor.title}</p>
             <div className="mt-6 space-y-4 text-brand-800">
               <p>
-                Dr. Sam Vojdani is a board-certified and fellowship-trained
-                orthopedic surgeon with a clinical focus on the replacement of
-                hip and knee joints. He specializes in minimally invasive
-                anterior approach hip replacement, quadriceps-sparing knee
-                replacement, robotic and computer-assisted surgical techniques,
-                and outpatient joint replacement services. His expertise also
-                spans partial knee replacement, multi-modal pain control
-                treatments, complex replacement and revision surgery, and
-                non-surgical arthritis care.
+                Sam Vojdani, MD is a board-certified and fellowship-trained
+                orthopedic surgeon specializing in hip and knee joint
+                replacement. He is an Atlanta native, born and raised in
+                Peachtree Corners and graduating from Duluth High School. He
+                attended Georgia Institute of Technology as a Stamps
+                President&rsquo;s Scholar, a top scholarship, and graduated
+                with degrees in biomedical engineering and biology with
+                highest honors. He was recognized as the number one graduating
+                student in the College of Sciences, alongside numerous other
+                accolades.
               </p>
               <p>
-                Dr. Vojdani approaches patient care as a partnership between
-                himself, the patient, and the broader care team. He is
-                motivated by seeing patients return to the activities they
-                love after a successful procedure, and is committed to
-                advancing the success rate for patients undergoing joint
-                replacement surgery.
+                Dr. Vojdani pursued medical training at the Medical College of
+                Georgia, graduating at the top of his class. He earned Alpha
+                Omega Alpha honors, acknowledging the top 10 percent of
+                national medical students. He also received the Gold Humanism
+                Award, representing the highest standards in patient
+                interaction. He then completed his orthopedic surgery
+                residency training at Stony Brook University Hospital in New
+                York, where he was named chief resident in his final year and
+                received the award for most outstanding research.
               </p>
               <p>
-                An Atlanta native, Dr. Vojdani was born and raised in Peachtree
-                Corners, Georgia. Outside of practice, he enjoys spending time
-                with his family, traveling, and culinary experiences.
+                Following residency, Dr. Vojdani was accepted to the
+                prestigious Frank E. Stinchfield Adult Reconstruction
+                Fellowship at Columbia University in New York City. Before
+                joining Total Joint Specialists, he held a faculty position at
+                Emory University, where he was recognized among the top 1
+                percent of physicians in patient satisfaction, care, and
+                likelihood to recommend.
+              </p>
+              <p>
+                His practice is guided by individualized decision-making,
+                whether treatment involves nonsurgical care or surgery. When
+                surgery is needed, he focuses on minimally invasive anterior
+                hip replacement, robotic-assisted knee replacement, partial
+                and total knee replacement, revision surgery, and outpatient
+                recovery pathways.
+              </p>
+              <p>
+                Dr. Vojdani continues to contribute to the field through
+                peer-reviewed publications, presentations, research review,
+                and clinical education. Outside medicine, he enjoys Atlanta
+                sports, travel, food, and time with his wife and children.
               </p>
             </div>
           </div>

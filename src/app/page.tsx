@@ -24,10 +24,18 @@ const credentials = [
 ];
 
 const whyChoose = [
+  "Board-Certified Orthopedic Surgeon",
   "Fellowship-Trained",
   "Exclusive Hip & Knee Care",
-  "Convenient Office Locations",
+  "Minimally Invasive Anterior Hip Replacement",
+  "Quadriceps-Sparing Knee Replacement",
+  "Robotic & Computer-Assisted Surgery",
+  "Same-Day Outpatient Joint Replacement",
+  "Complex Revision & Second-Opinion Care",
   "Minimal Opioid Protocols",
+  "Castle Connolly Top Doctor",
+  "Team-Based Recovery with Coordinated PT",
+  "Convenient Office Locations",
 ];
 
 export default function HomePage() {
