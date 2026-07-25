@@ -45,7 +45,7 @@ export default function HomePage() {
         <Container className="grid gap-10 py-14 lg:grid-cols-2 lg:items-center lg:py-20">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-brand-600">
-              Hip &amp; Knee Replacement · Atlanta, Georgia
+              Hip &amp; Knee Replacement in Georgia
             </p>
             <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-brand-950 sm:text-5xl">
               Expert Hip &amp; Knee Replacement Surgery with Dr. Sam Vojdani
