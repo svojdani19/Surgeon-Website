@@ -23,7 +23,10 @@ export const metadata: Metadata = {
     "Sam Vojdani MD",
     "Total Joint Specialists",
   ],
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": "/feed.xml" },
+  },
   openGraph: {
     type: "website",
     url: siteUrl,
@@ -54,6 +57,17 @@ export default function RootLayout({
     honorificSuffix: "MD",
     image: `${siteUrl}${doctor.headshot}`,
     url: siteUrl,
+    // Entity links to authoritative third-party profiles (E-E-A-T)
+    sameAs: [
+      "https://www.healthgrades.com/physician/dr-sam-vojdani-xylp2pt",
+      "https://doctor.webmd.com/doctor/saman-vojdani-6b7b261b-b965-4031-8ff4-384f4fd2a611-overview",
+      "https://providers.sharecare.com/doctor/dr-sam-vojdani-xylp2pt",
+      "https://health.usnews.com/doctors/sam-vojdani-2630262",
+      "https://www.vitals.com/doctors/1zjc70/saman-vojdani",
+      "https://providers.northside.com/provider/sam-vojdani/2605298",
+      "https://www.totaljointspecialists.com/provider/sam-vojdani-md",
+      "https://www.totaljointspecialist.com/surgeons/sam-vojdani",
+    ],
     medicalSpecialty: "Orthopedic",
     description:
       "Board-certified, fellowship-trained orthopedic surgeon specializing in hip and knee joint replacement in Atlanta, Georgia.",
@@ -136,8 +150,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-brand-700 focus:px-4 focus:py-2 focus:text-white"
+        >
+          Skip to main content
+        </a>
         <Header />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

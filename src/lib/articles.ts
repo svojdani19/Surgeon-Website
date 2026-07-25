@@ -5,6 +5,8 @@ export type Article = {
   metaDescription: string;
   category: "Hip" | "Knee" | "Recovery" | "Deciding";
   readingMinutes: number;
+  /** ISO date of the most recent medical review by Dr. Vojdani. */
+  lastReviewed: string;
   summary: string;
   /** Section heading + paragraphs. Rendered as h2 + p's. */
   sections: { heading: string; paragraphs: string[] }[];
@@ -23,6 +25,7 @@ export const articles: Article[] = [
       "What recovery from anterior hip replacement really looks like — week-by-week milestones, when you can walk, drive, and return to work, from Atlanta hip surgeon Dr. Sam Vojdani.",
     category: "Recovery",
     readingMinutes: 7,
+    lastReviewed: "2026-07-25",
     summary:
       "A realistic week-by-week look at recovery after minimally invasive anterior hip replacement — from the first steps on surgery day to returning to the activities you love.",
     sections: [
@@ -86,6 +89,7 @@ export const articles: Article[] = [
       "How to know when hip arthritis has progressed far enough to consider hip replacement — 7 signs from Atlanta orthopedic surgeon Dr. Sam Vojdani.",
     category: "Deciding",
     readingMinutes: 6,
+    lastReviewed: "2026-07-25",
     summary:
       "Hip replacement is elective — you choose when the time is right. These seven signs help you recognize when arthritis is taking more from your life than conservative care can give back.",
     sections: [
@@ -141,6 +145,7 @@ export const articles: Article[] = [
       "An honest comparison of anterior and posterior hip replacement approaches — recovery, precautions, risks, and who each is right for, from Atlanta surgeon Dr. Sam Vojdani.",
     category: "Hip",
     readingMinutes: 6,
+    lastReviewed: "2026-07-25",
     summary:
       "Both approaches produce excellent long-term results. The differences lie in the early recovery, movement precautions, and which anatomy each suits best.",
     sections: [
@@ -192,6 +197,7 @@ export const articles: Article[] = [
       "Partial and total knee replacement compared — candidacy, recovery, longevity, and trade-offs, explained by Atlanta knee surgeon Dr. Sam Vojdani.",
     category: "Knee",
     readingMinutes: 6,
+    lastReviewed: "2026-07-25",
     summary:
       "Partial knee replacement preserves more of your natural knee but only works when arthritis is confined to one compartment. Here's how surgeons decide — and what each option means for you.",
     sections: [
@@ -242,6 +248,7 @@ export const articles: Article[] = [
       "How to decide when knee arthritis justifies replacement surgery — signs, timing trade-offs, and what to try first, from Atlanta surgeon Dr. Sam Vojdani.",
     category: "Deciding",
     readingMinutes: 6,
+    lastReviewed: "2026-07-25",
     summary:
       "Knee replacement is worth it when arthritis costs you more than surgery would — here's how to weigh that honestly, and what conservative options deserve a real trial first.",
     sections: [
@@ -292,6 +299,7 @@ export const articles: Article[] = [
       "A realistic week-by-week knee replacement recovery timeline — walking, driving, work, and full activity, from Atlanta knee surgeon Dr. Sam Vojdani.",
     category: "Recovery",
     readingMinutes: 7,
+    lastReviewed: "2026-07-25",
     summary:
       "Knee replacement recovery rewards consistent work. This week-by-week guide sets realistic expectations — including the honest truth that knees grumble longer than hips.",
     sections: [
@@ -354,6 +362,7 @@ export const articles: Article[] = [
       "Who qualifies for outpatient same-day hip or knee replacement — the health, home, and surgical factors surgeons assess, from Atlanta surgeon Dr. Sam Vojdani.",
     category: "Deciding",
     readingMinutes: 5,
+    lastReviewed: "2026-07-25",
     summary:
       "Most healthy joint replacement patients can now recover at home from day one. Here's how surgeons decide who's a safe candidate for the outpatient pathway.",
     sections: [
@@ -403,6 +412,7 @@ export const articles: Article[] = [
       "What robotic-assisted knee replacement really does — precision planning, personalized alignment, and honest limits — from Atlanta surgeon Dr. Sam Vojdani.",
     category: "Knee",
     readingMinutes: 5,
+    lastReviewed: "2026-07-25",
     summary:
       "The robot doesn't perform your surgery — your surgeon does. Here's what robotic assistance genuinely adds to knee replacement, and what remains marketing.",
     sections: [
@@ -452,6 +462,7 @@ export const articles: Article[] = [
       "How hip and knee replacement is covered in Georgia — Medicare, commercial insurance, out-of-pocket factors, and questions to ask, from Dr. Sam Vojdani.",
     category: "Deciding",
     readingMinutes: 5,
+    lastReviewed: "2026-07-25",
     summary:
       "Joint replacement is one of medicine's best-covered procedures. Here's how coverage typically works in Georgia and the questions worth asking before you schedule.",
     sections: [
@@ -502,6 +513,7 @@ export const articles: Article[] = [
       "A practical pre-surgery checklist for hip and knee replacement — prehab, home setup, medical optimization, and what to bring, from Dr. Sam Vojdani.",
     category: "Recovery",
     readingMinutes: 6,
+    lastReviewed: "2026-07-25",
     summary:
       "The four to six weeks before surgery are an opportunity: patients who prepare well recover faster. Here's the practical checklist.",
     sections: [
@@ -559,6 +571,7 @@ export const articles: Article[] = [
       "New pain, instability, or swelling years after joint replacement? The warning signs a hip or knee implant may need revision, from Atlanta revision surgeon Dr. Sam Vojdani.",
     category: "Deciding",
     readingMinutes: 5,
+    lastReviewed: "2026-07-25",
     summary:
       "Most joint replacements last decades — but implants can loosen, wear, or become infected. Knowing the warning signs gets problems evaluated while they're most treatable.",
     sections: [
@@ -609,6 +622,7 @@ export const articles: Article[] = [
       "How long modern hip and knee replacements really last, what wears them out, and what you can do to protect yours — from Atlanta joint replacement surgeon Dr. Sam Vojdani.",
     category: "Deciding",
     readingMinutes: 6,
+    lastReviewed: "2026-07-25",
     summary:
       "Modern implants routinely outlast the old '10-year' rule of thumb. Here's what large registry studies actually show, what shortens an implant's life, and what you can do to protect yours.",
     sections: [

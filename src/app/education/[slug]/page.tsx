@@ -67,6 +67,8 @@ export default async function ArticlePage({
       name: doctor.name,
       url: `${siteUrl}/about`,
     },
+    lastReviewed: article.lastReviewed,
+    dateModified: article.lastReviewed,
     publisher: {
       "@type": "Organization",
       name: `${doctor.name} — ${doctor.practice}`,
@@ -141,6 +143,13 @@ export default async function ArticlePage({
               </p>
               <p className="text-brand-600">
                 Board-Certified Orthopedic Surgeon · Hip &amp; Knee Replacement
+              </p>
+              <p className="text-brand-500">
+                Last reviewed:{" "}
+                {new Date(article.lastReviewed + "T12:00:00Z").toLocaleDateString(
+                  "en-US",
+                  { month: "long", year: "numeric" }
+                )}
               </p>
             </div>
           </div>

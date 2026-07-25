@@ -42,6 +42,7 @@ export default function AboutPage() {
                 alt="Dr. Sam Vojdani, MD"
                 width={800}
                 height={704}
+                sizes="(max-width: 1024px) 80vw, 280px"
                 className="h-auto w-full object-cover"
               />
             </div>

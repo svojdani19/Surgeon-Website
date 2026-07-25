@@ -13,7 +13,10 @@ export const metadata: Metadata = {
   title: "Hip & Knee Replacement Surgeon in Atlanta, GA",
   description:
     "Dr. Sam Vojdani is a board-certified, fellowship-trained orthopedic surgeon offering anterior hip replacement, knee replacement, and revision joint surgery in Midtown Atlanta and Sandy Springs, GA.",
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": "/feed.xml" },
+  },
 };
 
 const credentials = [
@@ -86,6 +89,7 @@ export default function HomePage() {
                 width={800}
                 height={704}
                 priority
+                sizes="(max-width: 640px) 90vw, 384px"
                 className="h-auto w-full object-cover"
               />
             </div>
