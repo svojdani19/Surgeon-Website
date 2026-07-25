@@ -601,6 +601,75 @@ export const articles: Article[] = [
       "when-is-it-time-for-hip-replacement",
     ],
   },
+  {
+    slug: "how-long-does-joint-replacement-last",
+    title: "How Long Does a Hip or Knee Replacement Last?",
+    metaTitle: "How Long Do Hip & Knee Replacements Last?",
+    metaDescription:
+      "How long modern hip and knee replacements really last, what wears them out, and what you can do to protect yours — from Atlanta joint replacement surgeon Dr. Sam Vojdani.",
+    category: "Deciding",
+    readingMinutes: 6,
+    summary:
+      "Modern implants routinely outlast the old '10-year' rule of thumb. Here's what large registry studies actually show, what shortens an implant's life, and what you can do to protect yours.",
+    sections: [
+      {
+        heading: "The short answer: longer than most patients think",
+        paragraphs: [
+          "Patients often arrive quoting a decades-old rule of thumb that a joint replacement 'lasts about ten years.' Modern implants have outgrown that number. Large national joint registries — which track hundreds of thousands of real-world patients over decades — consistently show that the large majority of contemporary hip and knee replacements are still functioning well at 15 years, and a substantial share continue beyond 20 to 25 years.",
+          "No surgeon can promise a specific lifespan for any individual implant, because longevity depends on factors ranging from age and activity to bone quality and body weight. But for most patients receiving a modern hip or knee replacement today, it is reasonable to think of the implant as a long-term — often multi-decade — solution rather than a stopgap.",
+        ],
+      },
+      {
+        heading: "What actually wears an implant out",
+        paragraphs: [
+          "The most common long-term failure modes are gradual: slow wear of the plastic (polyethylene) bearing surface, and loosening of the implant's fixation to bone over many years. Modern highly cross-linked polyethylene wears dramatically slower than the plastics used a generation ago — one of the main reasons today's implants last longer.",
+          "Less common causes include infection (which can occur early or years later), instability or dislocation, and fracture of the bone around the implant. These are precisely the warning signs worth knowing — new pain, swelling, warmth, or instability in a previously comfortable replacement deserves evaluation rather than waiting.",
+        ],
+      },
+      {
+        heading: "Does age at surgery matter?",
+        paragraphs: [
+          "Yes, in two directions. Younger patients place more cycles and more force on an implant over more years, so their lifetime chance of eventually needing a revision is higher — not because the implant fails faster, but because they have more years ahead of them. A patient in their 50s should understand that a future revision is a realistic possibility, even with an excellent result.",
+          "That said, improved implant materials have made joint replacement a reasonable option for appropriately selected younger patients who have exhausted conservative care — trading years of pain and declining function for a well-functioning joint is a trade many patients consider worthwhile. This is exactly the kind of individualized decision Dr. Vojdani works through at consultation.",
+        ],
+      },
+      {
+        heading: "How to help your replacement last",
+        paragraphs: [
+          "Maintain a healthy weight — every added pound multiplies across millions of steps per year. Favor low-impact activities (walking, cycling, swimming, golf, doubles tennis) over repetitive high-impact running and jumping. Keep the muscles around the joint strong, since good muscle control protects the implant from abnormal stresses.",
+          "Protect against infection: treat skin infections and significant dental infections promptly, and tell any physician or dentist treating you that you have a joint replacement. Finally, keep periodic follow-up X-rays as your surgeon recommends — slow wear or early loosening often shows on imaging before it causes symptoms, when it is simplest to address.",
+        ],
+      },
+      {
+        heading: "What happens if it does wear out",
+        paragraphs: [
+          "If an implant eventually wears or loosens, revision surgery replaces the affected components. Revision is more complex than first-time replacement, but it is a well-established procedure — and identifying problems early, before significant bone loss, keeps the reconstruction simpler. Dr. Vojdani is fellowship-trained in complex revision reconstruction and evaluates painful existing replacements, including second opinions.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Can a knee or hip replacement last 30 years?",
+        answer:
+          "Some do — registry data include implants functioning beyond 25 years, and today's bearing materials wear more slowly than those in older studies. But no surgeon can guarantee any specific lifespan; longevity varies with activity, weight, bone quality, and some luck.",
+      },
+      {
+        question: "Do partial knee replacements last as long as total knees?",
+        answer:
+          "Partial knees historically show somewhat higher revision rates, partly because arthritis can progress in the untreated compartments. For well-selected patients they can still last decades, and conversion to a total knee remains available if needed.",
+      },
+      {
+        question: "Will I need another surgery in my lifetime?",
+        answer:
+          "It depends mostly on your age at surgery and activity. Many patients who have a replacement in their late 60s or 70s never need another operation. Younger, highly active patients carry a meaningful lifetime chance of one revision — worth discussing openly at consultation.",
+      },
+    ],
+    relatedServices: ["revision-joint-replacement", "total-knee-replacement", "anterior-hip-replacement"],
+    relatedArticles: [
+      "signs-of-failed-knee-or-hip-replacement",
+      "when-is-it-time-for-knee-replacement",
+    ],
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
