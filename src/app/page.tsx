@@ -1,0 +1,230 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import Container from "@/components/Container";
+import CTASection from "@/components/CTASection";
+import { doctor, locations, services, faqs } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Hip & Knee Replacement Surgeon in Atlanta, GA",
+  description:
+    "Dr. Sam Vojdani is a board-certified, fellowship-trained orthopedic surgeon offering anterior hip replacement, knee replacement, and revision joint surgery in Midtown Atlanta and Sandy Springs, GA.",
+  alternates: { canonical: "/" },
+};
+
+const credentials = [
+  "Board-Certified Orthopedic Surgeon",
+  "Columbia University Adult Reconstruction Fellowship",
+  "Alpha Omega Alpha Honor Society",
+  "Castle Connolly Top Doctor",
+];
+
+const whyChoose = [
+  {
+    title: "Fellowship-Trained in Adult Reconstruction",
+    body: "Dr. Vojdani completed the Frank E. Stinchfield Adult Reconstruction Fellowship at Columbia University, focused specifically on hip and knee replacement and revision surgery.",
+  },
+  {
+    title: "Minimally Invasive, Muscle-Sparing Techniques",
+    body: "From anterior hip replacement to quadriceps-sparing knee replacement, technique is chosen to protect healthy muscle and support a smoother recovery.",
+  },
+  {
+    title: "Two Convenient Atlanta-Area Locations",
+    body: "See Dr. Vojdani in Midtown Atlanta or Sandy Springs, with surgery performed at Northside Hospital Atlanta, Emory Johns Creek Hospital, and Total Joint Surgery Center – Cumming.",
+  },
+  {
+    title: "A Team-Based Approach to Recovery",
+    body: "Dr. Vojdani coordinates care with physical therapists and other providers, and uses multi-modal pain control protocols to support recovery after surgery.",
+  },
+];
+
+export default function HomePage() {
+  return (
+    <>
+      <section className="bg-gradient-to-b from-brand-50 to-white">
+        <Container className="grid gap-10 py-14 lg:grid-cols-2 lg:items-center lg:py-20">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-brand-600">
+              Hip &amp; Knee Replacement · Atlanta, Georgia
+            </p>
+            <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-brand-950 sm:text-5xl">
+              Expert Hip &amp; Knee Replacement Surgery with Dr. Sam Vojdani
+            </h1>
+            <p className="mt-5 text-lg text-brand-800">
+              Board-certified and fellowship-trained, Dr. Vojdani specializes in
+              anterior hip replacement, quadriceps-sparing knee replacement, and
+              robotic-assisted joint replacement at Total Joint Specialists in
+              Midtown Atlanta and Sandy Springs.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href={doctor.schedulingPhoneHref}
+                className="rounded-md bg-brand-700 px-6 py-3 text-center font-semibold text-white hover:bg-brand-800"
+              >
+                Call {doctor.schedulingPhoneDisplay}
+              </a>
+              <Link
+                href="/contact"
+                className="rounded-md border border-brand-700 px-6 py-3 text-center font-semibold text-brand-700 hover:bg-brand-50"
+              >
+                Request an Appointment
+              </Link>
+            </div>
+            <ul className="mt-8 grid grid-cols-2 gap-3 text-sm text-brand-800">
+              {credentials.map((c) => (
+                <li key={c} className="flex items-start gap-2">
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-600" />
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mx-auto w-full max-w-sm">
+            <div className="overflow-hidden rounded-2xl border border-brand-100 shadow-lg">
+              <Image
+                src={doctor.headshot}
+                alt="Dr. Sam Vojdani, MD, orthopedic surgeon in Atlanta, Georgia"
+                width={800}
+                height={704}
+                priority
+                className="h-auto w-full object-cover"
+              />
+            </div>
+            <p className="mt-3 text-center text-sm text-brand-600">
+              {doctor.name} — {doctor.title}
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16">
+        <Container>
+          <h2 className="font-serif text-3xl font-bold text-brand-950">
+            Is It Time to Consider Hip or Knee Replacement?
+          </h2>
+          <p className="mt-3 max-w-3xl text-brand-700">
+            Joint pain doesn&rsquo;t need to control your life. If you recognize
+            any of the following, it may be time to schedule a consultation:
+          </p>
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+            {[
+              "Pain limits walking, stairs, or standing for long periods",
+              "Joint pain disrupts your sleep most nights",
+              "You've scaled back activities you used to enjoy",
+              "Anti-inflammatories, injections, or therapy no longer help enough",
+              "Stiffness makes it hard to get in and out of a car or chair",
+              "X-rays show advanced arthritis in the hip or knee",
+            ].map((item) => (
+              <li
+                key={item}
+                className="rounded-lg border border-brand-100 bg-brand-50/60 p-4 text-brand-800"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      <section className="bg-brand-950 py-16 text-white">
+        <Container>
+          <h2 className="font-serif text-3xl font-bold">Why Patients Choose Dr. Vojdani</h2>
+          <div className="mt-8 grid gap-8 sm:grid-cols-2">
+            {whyChoose.map((item) => (
+              <div key={item.title}>
+                <h3 className="font-serif text-xl font-semibold text-brand-200">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-brand-300">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16">
+        <Container>
+          <div className="flex items-end justify-between">
+            <h2 className="font-serif text-3xl font-bold text-brand-950">
+              Hip &amp; Knee Procedures
+            </h2>
+            <Link href="/services" className="text-sm font-semibold text-brand-600 hover:underline">
+              View all services →
+            </Link>
+          </div>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/services/${s.slug}`}
+                className="group rounded-xl border border-brand-100 p-6 transition hover:border-brand-400 hover:shadow-md"
+              >
+                <h3 className="font-serif text-lg font-semibold text-brand-900 group-hover:text-brand-600">
+                  {s.name}
+                </h3>
+                <p className="mt-2 text-sm text-brand-700">{s.summary}</p>
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-brand-50 py-16">
+        <Container>
+          <h2 className="font-serif text-3xl font-bold text-brand-950">
+            Two Locations Serving Metro Atlanta
+          </h2>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            {locations.map((loc) => (
+              <div key={loc.slug} className="rounded-xl border border-brand-100 bg-white p-6">
+                <h3 className="font-serif text-xl font-semibold text-brand-900">
+                  {loc.shortName}
+                </h3>
+                <p className="mt-2 text-brand-700">
+                  {loc.addressLine1}
+                  {loc.addressLine2 && <>, {loc.addressLine2}</>}
+                  <br />
+                  {loc.city}, {loc.state} {loc.zip}
+                </p>
+                <a href={loc.phoneHref} className="mt-2 inline-block font-semibold text-brand-600">
+                  {loc.phoneDisplay}
+                </a>
+                <div className="mt-4">
+                  <Link
+                    href={`/locations/${loc.slug}`}
+                    className="text-sm font-semibold text-brand-600 hover:underline"
+                  >
+                    Directions &amp; details →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16">
+        <Container>
+          <h2 className="font-serif text-3xl font-bold text-brand-950">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-8 space-y-6">
+            {faqs.slice(0, 3).map((f) => (
+              <div key={f.question} className="border-b border-brand-100 pb-6">
+                <h3 className="font-serif text-lg font-semibold text-brand-900">
+                  {f.question}
+                </h3>
+                <p className="mt-2 text-brand-700">{f.answer}</p>
+              </div>
+            ))}
+          </div>
+          <Link href="/faq" className="mt-6 inline-block text-sm font-semibold text-brand-600 hover:underline">
+            Read the full FAQ →
+          </Link>
+        </Container>
+      </section>
+
+      <CTASection />
+    </>
+  );
+}
