@@ -18,41 +18,77 @@ export const doctor = {
    * visitors can verify the rating themselves. Replace with the exact
    * Google Business Profile review link when available.
    */
-  googleReviewUrl:
-    "https://www.google.com/search?q=%22Dr.+Sam+Vojdani%22+reviews",
+  googleReviewUrl: "https://www.google.com/maps/search/Dr.+Sam+Vojdani+Atlanta",
   googleRating: "5.0",
+  googleReviewCount: 196, // 132 Midtown + 64 Sandy Springs, verified Jul 2026
 };
 
 /**
- * Verbatim patient reviews from public profiles — exact text, real dates,
- * honest source attribution. Do not edit quotes or invent new ones.
+ * Verbatim 5-star Google reviews from Dr. Vojdani's public Maps listings —
+ * exact text (long reviews excerpted with ellipses, meaning preserved),
+ * real reviewer first names + last initial. Do not edit or invent quotes.
  */
 export const testimonials: {
   quote: string;
+  name: string;
+  procedure: string;
   source: string;
-  date: string;
-  url: string;
 }[] = [
   {
     quote:
-      "I never felt rushed!! He LISTENED to what I had to say and LISTENED to my answers to HIS questions!!",
-    source: "Healthgrades patient review",
-    date: "Aug 2023",
-    url: "https://www.healthgrades.com/physician/dr-sam-vojdani-xylp2pt",
+      "I had my right knee replaced early September 2025 and it has been life changing. Dr. Vojdani and his team go the extra mile to make sure your surgery and recovery process are as smooth and pain free as possible. I am back at the gym doing CrossFit and feeling strong. My knee continues to amaze me after years of excruciating pain.",
+    name: "Celeste H.",
+    procedure: "Knee replacement",
+    source: "Google review",
   },
   {
     quote:
-      "After 3 others couldn't or incorrectly diagnosed my knee pain, Dr. Vojdani discovered the cause.",
-    source: "Healthgrades patient review",
-    date: "Jul 2022",
-    url: "https://www.healthgrades.com/physician/dr-sam-vojdani-xylp2pt",
+      "Since released from regular follow up visits, I have not had any issues what so ever, like new! I have since hiked volcanoes and rain forest in Costa Rica, the Alps in Switzerland and started coaching again. Thanks Dr. V.",
+    name: "B.L. H.",
+    procedure: "Knee replacement",
+    source: "Google review",
   },
   {
     quote:
-      "I felt Dr. Vojdani and his team never left my side, well after I had left the hospital.",
-    source: "Healthgrades patient review",
-    date: "Jan 2021",
-    url: "https://www.healthgrades.com/physician/dr-sam-vojdani-xylp2pt",
+      "Dr. Vojdani worked miracles with my knee revision surgery and my total hip replacement surgery. I recommend him 110% to anyone contemplating knee or hip surgery. He is truly an incredible, knowledgeable, caring doctor and among the top in his field.",
+    name: "Lisa W.",
+    procedure: "Knee revision & hip replacement",
+    source: "Google review",
+  },
+  {
+    quote:
+      "It is impossible to express how much I am enjoying quality of my life. The surgery went flawless, and the recovery has been much faster and smoother than I anticipated. Dr. Vojdani and his entire team helped me from the initial consultation to post operative follow-ups.",
+    name: "Ravinder B.",
+    procedure: "Knee replacement",
+    source: "Google review",
+  },
+  {
+    quote:
+      "Thank you Dr Vojdani and everyone at Total Joint Specialist for my life changing hip replacement. What an amazing experience! … On Christmas Eve it will be 8 months! I walk completely unassisted! … I am 99% pain free. … I waited way too long. I'm so proud of myself.",
+    name: "Jenna L.",
+    procedure: "Anterior hip replacement",
+    source: "Google review",
+  },
+  {
+    quote:
+      "I had both hips replaced within a year at Total Joint Specialist. The experience was quick, educational, and comprehensive. I highly recommend Dr. Vojdani for joint replacements.",
+    name: "Liana C.",
+    procedure: "Bilateral hip replacement",
+    source: "Google review",
+  },
+  {
+    quote:
+      "Dr Vojdani is very personable, made me feel assured by his confidence in replacing my knee. Every member of his team from Dr V to the ladies on reception were extremely professional and made the whole experience easy and stress free.",
+    name: "Jason I.",
+    procedure: "Knee replacement",
+    source: "Google review",
+  },
+  {
+    quote:
+      "When I found Dr. Vojdani all my worries were over he did my 4 knee replacement and I haven't had a problem since. I had him also do my other knee. I love this Doctor he explains everything to you and wants your feedback.",
+    name: "Cassandra C.",
+    procedure: "Revision knee replacement",
+    source: "Google review",
   },
 ];
 

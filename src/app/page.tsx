@@ -4,7 +4,8 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
 import { CategoryIllustration, GoogleStars } from "@/components/MedicalIllustrations";
-import { doctor, locations, services, faqs, testimonials } from "@/lib/site";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
+import { doctor, locations, services, faqs } from "@/lib/site";
 import { articles } from "@/lib/articles";
 import { serviceAreas } from "@/lib/areas";
 
@@ -162,38 +163,19 @@ export default function HomePage() {
           <div className="mx-auto max-w-3xl text-center">
             <GoogleStars className="justify-center" />
             <h2 className="mt-3 font-serif text-3xl font-bold text-brand-950">
-              Rated {doctor.googleRating} by Patients on Google
+              Rated {doctor.googleRating} Across {doctor.googleReviewCount}{" "}
+              Google Reviews
             </h2>
             <p className="mt-4 text-brand-700">
-              Patient trust is earned one recovery at a time. During his time on
-              faculty at Emory University, Dr. Vojdani was recognized among the
-              top 1% of physicians nationally in patient satisfaction, care, and
-              likelihood to recommend — and his patients&rsquo; own words on
-              Google tell the rest of the story.
+              Patient trust is earned one recovery at a time. Dr. Vojdani holds
+              a perfect 5.0 rating across both office locations on Google —
+              and during his time on faculty at Emory University he was
+              recognized among the top 1% of physicians nationally in patient
+              satisfaction, care, and likelihood to recommend. His
+              patients&rsquo; own words tell the rest of the story.
             </p>
-            <div className="mt-8 grid gap-5 text-left sm:grid-cols-3">
-              {testimonials.map((t) => (
-                <figure
-                  key={t.quote}
-                  className="flex flex-col rounded-xl border border-brand-100 bg-white p-6 shadow-sm"
-                >
-                  <GoogleStars />
-                  <blockquote className="mt-3 flex-1 text-sm leading-relaxed text-brand-800">
-                    &ldquo;{t.quote}&rdquo;
-                  </blockquote>
-                  <figcaption className="mt-4 text-xs text-brand-500">
-                    <a
-                      href={t.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline"
-                    >
-                      {t.source}
-                    </a>{" "}
-                    · {t.date}
-                  </figcaption>
-                </figure>
-              ))}
+            <div className="mt-8">
+              <TestimonialCarousel />
             </div>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
