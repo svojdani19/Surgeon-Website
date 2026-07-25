@@ -24,22 +24,18 @@ const credentials = [
 ];
 
 const whyChoose = [
-  {
-    title: "Fellowship-Trained in Adult Reconstruction",
-    body: "Dr. Vojdani completed the Frank E. Stinchfield Adult Reconstruction Fellowship at Columbia University, focused specifically on hip and knee replacement and revision surgery.",
-  },
-  {
-    title: "Minimally Invasive, Muscle-Sparing Techniques",
-    body: "From anterior hip replacement to quadriceps-sparing knee replacement, technique is chosen to protect healthy muscle and support a smoother recovery.",
-  },
-  {
-    title: "Two Convenient Atlanta-Area Locations",
-    body: "See Dr. Vojdani in Midtown Atlanta or Sandy Springs, with surgery performed at Total Joint Surgery Center – Atlanta, Northside Hospital Atlanta, and Meridian Mark Ambulatory Surgery Center.",
-  },
-  {
-    title: "A Team-Based Approach to Recovery",
-    body: "Dr. Vojdani coordinates care with physical therapists and other providers, and uses multi-modal pain control protocols to support recovery after surgery.",
-  },
+  "Board-Certified Orthopedic Surgeon",
+  "Columbia University Fellowship-Trained in Adult Reconstruction",
+  "Practice Dedicated Exclusively to Hip & Knee Replacement",
+  "Minimally Invasive Anterior Hip Replacement",
+  "Quadriceps-Sparing & Robotic-Assisted Knee Replacement",
+  "Same-Day Outpatient Joint Replacement",
+  "Complex Revision & Second-Opinion Care",
+  "Multi-Modal Pain Control to Minimize Opioids",
+  "5.0-Star Google Rating Across Both Locations",
+  "Castle Connolly Top Doctor",
+  "Team-Based Care with Coordinated Physical Therapy",
+  "Two Convenient Offices in Midtown Atlanta & Sandy Springs",
 ];
 
 export default function HomePage() {
@@ -130,16 +126,27 @@ export default function HomePage() {
       <section className="bg-brand-950 py-16 text-white">
         <Container>
           <h2 className="font-serif text-3xl font-bold">Why Patients Choose Dr. Vojdani</h2>
-          <div className="mt-8 grid gap-8 sm:grid-cols-2">
+          <ul className="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2">
             {whyChoose.map((item) => (
-              <div key={item.title}>
-                <h3 className="font-serif text-xl font-semibold text-brand-200">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-brand-300">{item.body}</p>
-              </div>
+              <li key={item} className="flex items-start gap-3">
+                <svg
+                  viewBox="0 0 20 20"
+                  className="mt-1 h-5 w-5 shrink-0 text-brand-300"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm3.7-9.3a1 1 0 0 0-1.4-1.4L9 10.6 7.7 9.3a1 1 0 0 0-1.4 1.4l2 2a1 1 0 0 0 1.4 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <span className="font-serif text-lg font-semibold text-brand-100">
+                  {item}
+                </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </Container>
       </section>
 
@@ -173,15 +180,6 @@ export default function HomePage() {
                 Meet Dr. Vojdani
               </Link>
             </div>
-            <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-brand-600">
-              <li>Castle Connolly Top Doctor</li>
-              <li aria-hidden="true">·</li>
-              <li>Alpha Omega Alpha Honor Society</li>
-              <li aria-hidden="true">·</li>
-              <li>Gold Humanism Honor Society</li>
-              <li aria-hidden="true">·</li>
-              <li>Columbia Fellowship-Trained</li>
-            </ul>
           </div>
         </Container>
       </section>

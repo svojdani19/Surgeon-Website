@@ -118,9 +118,8 @@ export const locations: Location[] = [
     city: "Atlanta",
     state: "GA",
     zip: "30309",
-    phoneDisplay: "(404) 888-5120",
-    phoneHref: "tel:+14048885120",
-    fax: "(404) 888-5135",
+    phoneDisplay: "(770) 292-6500",
+    phoneHref: "tel:+17702926500",
     hours: [
       "Monday – Thursday: 7:30 AM – 4:00 PM",
       "Friday: 7:30 AM – 1:00 PM",
