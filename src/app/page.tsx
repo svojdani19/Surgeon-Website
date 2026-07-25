@@ -163,16 +163,11 @@ export default function HomePage() {
           <div className="mx-auto max-w-3xl text-center">
             <GoogleStars className="justify-center" />
             <h2 className="mt-3 font-serif text-3xl font-bold text-brand-950">
-              Rated {doctor.googleRating} Across {doctor.googleReviewCount}{" "}
-              Google Reviews
+              Rated 5 Stars Across Google Reviews
             </h2>
             <p className="mt-4 text-brand-700">
-              Patient trust is earned one recovery at a time. Dr. Vojdani holds
-              a perfect 5.0 rating across both office locations on Google —
-              and during his time on faculty at Emory University he was
-              recognized among the top 1% of physicians nationally in patient
-              satisfaction, care, and likelihood to recommend. His
-              patients&rsquo; own words tell the rest of the story.
+              Patient trust is earned one recovery at a time. See what has been
+              said by real patients, just like you.
             </p>
             <div className="mt-8">
               <TestimonialCarousel />
