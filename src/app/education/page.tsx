@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BackgroundVideo from "@/components/BackgroundVideo";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -101,18 +102,24 @@ function JourneySection({
 export default function EducationPage() {
   return (
     <>
-      <section className="bg-brand-50 py-14">
-        <Container>
+      <section className="relative overflow-hidden bg-brand-950">
+        <BackgroundVideo src="/video/dancing-couple.mp4" eager />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-950/70 to-brand-900/40"
+          aria-hidden="true"
+        />
+        <Container className="relative py-16 lg:py-24">
           <Breadcrumbs
+            variant="light"
             crumbs={[
               { name: "Home", href: "/" },
               { name: "Patient Education", href: "/education" },
             ]}
           />
-          <h1 className="mt-3 font-serif text-4xl font-bold text-brand-950">
+          <h1 className="mt-3 font-serif text-4xl font-bold text-white sm:text-5xl">
             Patient Education Library
           </h1>
-          <p className="mt-4 max-w-2xl text-brand-800">
+          <p className="mt-4 max-w-2xl text-lg text-brand-100">
             Clear, honest answers to the questions patients actually ask about
             hip and knee replacement — organized as a step-by-step path from
             deciding on surgery through preparation, recovery, and beyond.

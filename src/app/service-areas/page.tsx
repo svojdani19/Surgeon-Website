@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
@@ -15,18 +16,31 @@ export const metadata: Metadata = {
 export default function ServiceAreasPage() {
   return (
     <>
-      <section className="bg-brand-50 py-14">
-        <Container>
+      <section className="relative overflow-hidden bg-brand-950">
+        <Image
+          src="/images/atlanta-skyline-green.jpg"
+          alt="Aerial view of the Atlanta skyline surrounded by greenery"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-950/70 to-brand-900/40"
+          aria-hidden="true"
+        />
+        <Container className="relative py-16 lg:py-24">
           <Breadcrumbs
+            variant="light"
             crumbs={[
               { name: "Home", href: "/" },
               { name: "Areas We Serve", href: "/service-areas" },
             ]}
           />
-          <h1 className="mt-3 font-serif text-4xl font-bold text-brand-950">
+          <h1 className="mt-3 font-serif text-4xl font-bold text-white sm:text-5xl">
             Hip &amp; Knee Replacement Across Metro Atlanta
           </h1>
-          <p className="mt-4 max-w-2xl text-brand-800">
+          <p className="mt-4 max-w-2xl text-lg text-brand-100">
             With offices in Midtown Atlanta and Sandy Springs — and surgery at
             Total Joint Surgery Center – Atlanta, Northside Hospital Atlanta,
             and Meridian Mark Ambulatory Surgery Center — Dr. Vojdani cares for

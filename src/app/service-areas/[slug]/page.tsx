@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/Container";
@@ -42,21 +43,32 @@ export default async function AreaPage({
   return (
     <>
       <section className="bg-brand-50 py-14">
-        <Container>
-          <Breadcrumbs
-            crumbs={[
-              { name: "Home", href: "/" },
-              { name: "Areas We Serve", href: "/service-areas" },
-              { name: area.city, href: `/service-areas/${area.slug}` },
-            ]}
-          />
-          <h1 className="mt-3 font-serif text-4xl font-bold text-brand-950">
-            Hip &amp; Knee Replacement for {area.city}
-          </h1>
-          <p className="mt-2 text-brand-700">
-            {doctor.name} · Board-Certified, Fellowship-Trained Joint
-            Replacement Surgeon
-          </p>
+        <Container className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_400px] lg:items-center">
+          <div>
+            <Breadcrumbs
+              crumbs={[
+                { name: "Home", href: "/" },
+                { name: "Areas We Serve", href: "/service-areas" },
+                { name: area.city, href: `/service-areas/${area.slug}` },
+              ]}
+            />
+            <h1 className="mt-3 font-serif text-4xl font-bold text-brand-950">
+              Hip &amp; Knee Replacement for {area.city}
+            </h1>
+            <p className="mt-2 text-brand-700">
+              {doctor.name} · Board-Certified, Fellowship-Trained Joint
+              Replacement Surgeon
+            </p>
+          </div>
+          <div className="relative h-52 w-full overflow-hidden rounded-2xl shadow-lg lg:h-60">
+            <Image
+              src="/images/atlanta-skyline-green.jpg"
+              alt="Aerial view of the Atlanta skyline surrounded by greenery"
+              fill
+              sizes="(max-width: 1024px) 90vw, 400px"
+              className="object-cover"
+            />
+          </div>
         </Container>
       </section>
 

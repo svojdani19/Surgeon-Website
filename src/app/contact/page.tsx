@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
+import PhotoHero from "@/components/PhotoHero";
 import { doctor, locations } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -11,15 +12,21 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="py-16">
-      <Container>
-        <h1 className="font-serif text-4xl font-bold text-brand-950">
-          Contact &amp; Scheduling
-        </h1>
-        <p className="mt-4 max-w-2xl text-brand-800">
-          To schedule a consultation with {doctor.name}, call the {doctor.practice}{" "}
-          scheduling line or contact either office location directly.
+    <>
+      <PhotoHero
+        image="/images/tablet-xray.jpg"
+        imageAlt="Physician reviewing an X-ray with a patient on a tablet"
+        eyebrow="Get In Touch"
+        title="Contact & Scheduling"
+      >
+        <p className="mt-4 max-w-2xl text-lg text-brand-100">
+          To schedule a consultation with {doctor.name}, call the{" "}
+          {doctor.practice} scheduling line or contact either office location
+          directly.
         </p>
+      </PhotoHero>
+      <section className="py-16">
+        <Container>
 
         <div className="mt-8 rounded-xl border border-brand-100 bg-brand-50/60 p-6">
           <h2 className="font-serif text-lg font-semibold text-brand-900">
@@ -59,7 +66,8 @@ export default function ContactPage() {
             </div>
           ))}
         </div>
-      </Container>
-    </section>
+        </Container>
+      </section>
+    </>
   );
 }

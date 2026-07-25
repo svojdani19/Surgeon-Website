@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
+import PhotoHero from "@/components/PhotoHero";
 import { faqs } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -27,18 +28,18 @@ export default function FaqPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <section className="bg-brand-50 py-14">
-        <Container>
-          <h1 className="font-serif text-4xl font-bold text-brand-950">
-            Frequently Asked Questions
-          </h1>
-          <p className="mt-4 max-w-2xl text-brand-800">
-            Answers to common questions patients ask Dr. Vojdani about hip
-            and knee replacement. For questions specific to your situation,
-            please schedule a consultation.
-          </p>
-        </Container>
-      </section>
+      <PhotoHero
+        image="/images/consultation.jpg"
+        imageAlt="Patient receiving a consultation from a medical professional"
+        eyebrow="Patient Questions"
+        title="Frequently Asked Questions"
+      >
+        <p className="mt-4 max-w-2xl text-lg text-brand-100">
+          Answers to common questions patients ask Dr. Vojdani about hip
+          and knee replacement. For questions specific to your situation,
+          please schedule a consultation.
+        </p>
+      </PhotoHero>
       <section className="py-16">
         <Container className="space-y-8">
           {faqs.map((f) => (

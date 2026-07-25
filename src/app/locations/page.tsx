@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
+import PhotoHero from "@/components/PhotoHero";
 import { locations, surgeryFacilities } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -14,19 +15,19 @@ export const metadata: Metadata = {
 export default function LocationsPage() {
   return (
     <>
-      <section className="bg-brand-50 py-14">
-        <Container>
-          <h1 className="font-serif text-4xl font-bold text-brand-950">
-            Office Locations
-          </h1>
-          <p className="mt-4 max-w-2xl text-brand-800">
-            Dr. Sam Vojdani sees patients at two Total Joint Specialists
-            offices in metro Atlanta. Surgery is performed at Total Joint
-            Surgery Center – Atlanta, Northside Hospital Atlanta, and
-            Meridian Mark Ambulatory Surgery Center.
-          </p>
-        </Container>
-      </section>
+      <PhotoHero
+        image="/images/atlanta-skyline.jpg"
+        imageAlt="Aerial view of the Atlanta, Georgia skyline on a sunny day"
+        eyebrow="Visit Us"
+        title="Office Locations"
+      >
+        <p className="mt-4 max-w-2xl text-lg text-brand-100">
+          Dr. Sam Vojdani sees patients at two Total Joint Specialists
+          offices in metro Atlanta. Surgery is performed at Total Joint
+          Surgery Center – Atlanta, Northside Hospital Atlanta, and
+          Meridian Mark Ambulatory Surgery Center.
+        </p>
+      </PhotoHero>
       <section className="py-16">
         <Container className="grid gap-8 sm:grid-cols-2">
           {locations.map((loc) => (

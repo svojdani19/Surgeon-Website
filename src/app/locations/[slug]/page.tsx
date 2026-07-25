@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/Container";
@@ -57,16 +58,32 @@ export default async function LocationDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }}
       />
       <section className="bg-brand-50 py-14">
-        <Container>
-          <Link href="/locations" className="text-sm font-semibold text-brand-600 hover:underline">
-            ← All Locations
-          </Link>
-          <h1 className="mt-3 font-serif text-4xl font-bold text-brand-950">
-            {loc.shortName} Office
-          </h1>
-          <p className="mt-2 text-brand-800">
-            {doctor.name} — {doctor.title}
-          </p>
+        <Container className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_400px] lg:items-center">
+          <div>
+            <Link href="/locations" className="text-sm font-semibold text-brand-600 hover:underline">
+              ← All Locations
+            </Link>
+            <h1 className="mt-3 font-serif text-4xl font-bold text-brand-950">
+              {loc.shortName} Office
+            </h1>
+            <p className="mt-2 text-brand-800">
+              {doctor.name} — {doctor.title}
+            </p>
+          </div>
+          <div className="relative h-52 w-full overflow-hidden rounded-2xl shadow-lg lg:h-60">
+            <Image
+              src={
+                loc.slug === "midtown-atlanta"
+                  ? "/images/atlanta-skyline.jpg"
+                  : "/images/atlanta-skyline-green.jpg"
+              }
+              alt="Aerial view of the Atlanta, Georgia skyline"
+              fill
+              priority
+              sizes="(max-width: 1024px) 90vw, 400px"
+              className="object-cover"
+            />
+          </div>
         </Container>
       </section>
       <section className="py-16">
