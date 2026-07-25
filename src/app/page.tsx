@@ -119,26 +119,11 @@ export default function HomePage() {
             Is It Time to Consider Hip or Knee Replacement?
           </h2>
           <p className="mt-3 max-w-3xl text-brand-700">
-            Joint pain doesn&rsquo;t need to control your life. If you recognize
-            any of the following, it may be time to schedule a consultation:
+            Joint pain doesn&rsquo;t need to control your life. Even if surgery
+            isn&rsquo;t needed, schedule time to speak with Dr. Vojdani so you
+            can work together and find the best path to get you back to being
+            you.
           </p>
-          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
-            {[
-              "Pain limits walking, stairs, or standing for long periods",
-              "Joint pain disrupts your sleep most nights",
-              "You've scaled back activities you used to enjoy",
-              "Anti-inflammatories, injections, or therapy no longer help enough",
-              "Stiffness makes it hard to get in and out of a car or chair",
-              "X-rays show advanced arthritis in the hip or knee",
-            ].map((item) => (
-              <li
-                key={item}
-                className="rounded-lg border border-brand-100 bg-brand-50/60 p-4 text-brand-800"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
         </Container>
       </section>
 
