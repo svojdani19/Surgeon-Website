@@ -25,17 +25,17 @@ const credentials = [
 
 const whyChoose = [
   "Board-Certified Orthopedic Surgeon",
-  "Columbia University Fellowship-Trained in Adult Reconstruction",
-  "Practice Dedicated Exclusively to Hip & Knee Replacement",
+  "Columbia Fellowship-Trained in Adult Reconstruction",
+  "Dedicated Exclusively to Hip & Knee Replacement",
   "Minimally Invasive Anterior Hip Replacement",
-  "Quadriceps-Sparing & Robotic-Assisted Knee Replacement",
+  "Quadriceps-Sparing Knee Replacement",
+  "Robotic & Computer-Assisted Surgery",
   "Same-Day Outpatient Joint Replacement",
   "Complex Revision & Second-Opinion Care",
   "Multi-Modal Pain Control to Minimize Opioids",
-  "5.0-Star Google Rating Across Both Locations",
   "Castle Connolly Top Doctor",
-  "Team-Based Care with Coordinated Physical Therapy",
-  "Two Convenient Offices in Midtown Atlanta & Sandy Springs",
+  "Team-Based Recovery with Coordinated PT",
+  "Offices in Midtown Atlanta & Sandy Springs",
 ];
 
 export default function HomePage() {

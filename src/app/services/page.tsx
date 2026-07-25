@@ -24,9 +24,9 @@ export default function ServicesPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-brand-800">
             Dr. Sam Vojdani offers a full range of surgical and non-surgical
-            options for hip and knee arthritis, from minimally invasive
-            anterior hip replacement to complex revision reconstruction,
-            at Total Joint Specialists in Midtown Atlanta and Sandy Springs.
+            options for hip and knee arthritis, from injections to minimally
+            invasive anterior hip replacement and complex revision
+            reconstruction. Schedule an appointment to see how we can help you.
           </p>
         </Container>
       </section>
