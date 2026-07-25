@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
+import BackgroundVideo from "@/components/BackgroundVideo";
 import { CategoryIllustration, GoogleStars } from "@/components/MedicalIllustrations";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { doctor, locations, services, faqs } from "@/lib/site";
@@ -44,16 +45,21 @@ const whyChoose = [
 export default function HomePage() {
   return (
     <>
-      <section className="bg-gradient-to-b from-brand-50 to-white">
-        <Container className="grid gap-10 py-14 lg:grid-cols-2 lg:items-center lg:py-20">
+      <section className="relative overflow-hidden bg-brand-950">
+        <BackgroundVideo src="/video/hiking-couple.mp4" eager />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-950/75 to-brand-900/50"
+          aria-hidden="true"
+        />
+        <Container className="relative grid gap-10 py-14 lg:grid-cols-2 lg:items-center lg:py-20">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-brand-600">
+            <p className="text-sm font-semibold uppercase tracking-wide text-brand-300">
               Hip &amp; Knee Replacement in Georgia
             </p>
-            <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-brand-950 sm:text-5xl">
+            <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-white sm:text-5xl">
               Expert Hip &amp; Knee Replacement Surgery with Dr. Sam Vojdani
             </h1>
-            <p className="mt-5 text-lg text-brand-800">
+            <p className="mt-5 text-lg text-brand-100">
               Board-certified and fellowship-trained, Dr. Vojdani specializes in
               anterior hip replacement, muscle-sparing knee replacement, and
               technology-assisted joint replacement.
@@ -61,21 +67,21 @@ export default function HomePage() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href={doctor.schedulingPhoneHref}
-                className="rounded-md bg-brand-700 px-6 py-3 text-center font-semibold text-white hover:bg-brand-800"
+                className="rounded-md bg-white px-6 py-3 text-center font-semibold text-brand-800 hover:bg-brand-100"
               >
                 Call {doctor.schedulingPhoneDisplay}
               </a>
               <Link
                 href="/contact"
-                className="rounded-md border border-brand-700 px-6 py-3 text-center font-semibold text-brand-700 hover:bg-brand-50"
+                className="rounded-md border border-white px-6 py-3 text-center font-semibold text-white hover:bg-white/10"
               >
                 Request an Appointment
               </Link>
             </div>
-            <ul className="mt-8 grid grid-cols-2 gap-3 text-sm text-brand-800">
+            <ul className="mt-8 grid grid-cols-2 gap-3 text-sm text-brand-100">
               {credentials.map((c) => (
                 <li key={c} className="flex items-start gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-600" />
+                  <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-300" />
                   {c}
                 </li>
               ))}
@@ -93,7 +99,7 @@ export default function HomePage() {
                 className="h-auto w-full object-cover"
               />
             </div>
-            <p className="mt-3 text-center text-sm text-brand-600">
+            <p className="mt-3 text-center text-sm text-brand-200">
               {doctor.name} — {doctor.title}
             </p>
             <a
@@ -326,7 +332,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <CTASection />
+      <CTASection video="/video/golf.mp4" />
     </>
   );
 }

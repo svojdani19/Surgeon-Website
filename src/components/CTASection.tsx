@@ -1,15 +1,25 @@
+import BackgroundVideo from "./BackgroundVideo";
 import { doctor } from "@/lib/site";
 
 export default function CTASection({
   heading = "Ready to talk about your hip or knee pain?",
   subheading = "Schedule a consultation with Dr. Sam Vojdani.",
+  video,
 }: {
   heading?: string;
   subheading?: string;
+  /** Optional background video path — lazy-loaded, muted loop. */
+  video?: string;
 }) {
   return (
-    <section className="bg-brand-800 py-14 text-white">
-      <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 px-4 text-center">
+    <section className="relative overflow-hidden bg-brand-800 py-14 text-white">
+      {video && (
+        <>
+          <BackgroundVideo src={video} />
+          <div className="absolute inset-0 bg-brand-950/75" aria-hidden="true" />
+        </>
+      )}
+      <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-6 px-4 text-center">
         <h2 className="font-serif text-3xl font-bold">{heading}</h2>
         <p className="text-brand-100">{subheading}</p>
         <div className="flex flex-col gap-3 sm:flex-row">
