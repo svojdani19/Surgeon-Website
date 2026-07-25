@@ -627,10 +627,10 @@ export const articles: Article[] = [
         ],
       },
       {
-        heading: "Does age at surgery matter?",
+        heading: "What if I'm younger? The modern-implant difference",
         paragraphs: [
-          "Yes, in two directions. Younger patients place more cycles and more force on an implant over more years, so their lifetime chance of eventually needing a revision is higher — not because the implant fails faster, but because they have more years ahead of them. A patient in their 50s should understand that a future revision is a realistic possibility, even with an excellent result.",
-          "That said, improved implant materials have made joint replacement a reasonable option for appropriately selected younger patients who have exhausted conservative care — trading years of pain and declining function for a well-functioning joint is a trade many patients consider worthwhile. This is exactly the kind of individualized decision Dr. Vojdani works through at consultation.",
+          "A generation ago, surgeons counseled younger patients to delay replacement as long as possible, because older bearing materials wore measurably with every year of active use. Modern implants changed that math. Today's highly cross-linked polyethylene bearings wear so slowly that, for most patients — including active patients in their 50s — the implant is expected to keep pace with decades of real life, and needing a revision has become the exception rather than the rule.",
+          "That shift is why Dr. Vojdani no longer views age alone as a reason to endure years of pain and declining function. For appropriately selected younger patients who have exhausted conservative care, joint replacement with modern materials is a durable, long-term solution — and the far more common outcome is a joint that simply stops being something you think about. This is exactly the kind of individualized decision Dr. Vojdani works through at consultation.",
         ],
       },
       {
@@ -661,7 +661,7 @@ export const articles: Article[] = [
       {
         question: "Will I need another surgery in my lifetime?",
         answer:
-          "It depends mostly on your age at surgery and activity. Many patients who have a replacement in their late 60s or 70s never need another operation. Younger, highly active patients carry a meaningful lifetime chance of one revision — worth discussing openly at consultation.",
+          "For most patients, no. With modern implant materials, the large majority of hip and knee replacements — including those done for younger, active patients — are expected to last for decades, and revision surgery has become the exception rather than the rule. No implant can be absolutely guaranteed, which is why periodic follow-up imaging is still worthwhile.",
       },
     ],
     relatedServices: ["revision-joint-replacement", "total-knee-replacement", "anterior-hip-replacement"],
