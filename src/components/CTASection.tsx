@@ -12,7 +12,11 @@ export default function CTASection({
   video?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-brand-800 py-14 text-white">
+    <section
+      className={`relative overflow-hidden bg-brand-800 text-white ${
+        video ? "py-28 sm:py-40" : "py-14"
+      }`}
+    >
       {video && (
         <>
           <BackgroundVideo src={video} />

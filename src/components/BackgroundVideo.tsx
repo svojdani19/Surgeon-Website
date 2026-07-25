@@ -37,6 +37,28 @@ export default function BackgroundVideo({
     return () => io.disconnect();
   }, [eager]);
 
+  // canplay can fire BEFORE hydration when the video is cached/fast (the
+  // eager hero path), so the onCanPlay prop alone would never flip `ready`
+  // and the video would stay invisible. Check readyState directly, retry
+  // play() for browsers that block pre-hydration autoplay, and poll briefly
+  // as a backstop.
+  useEffect(() => {
+    if (!visible) return;
+    const el = ref.current;
+    if (!el) return;
+    const check = () => {
+      if (el.readyState >= 3) setReady(true);
+      if (el.paused) el.play().catch(() => {});
+    };
+    check();
+    const t = setInterval(check, 500);
+    const stop = setTimeout(() => clearInterval(t), 8000);
+    return () => {
+      clearInterval(t);
+      clearTimeout(stop);
+    };
+  }, [visible]);
+
   return (
     <video
       ref={ref}
