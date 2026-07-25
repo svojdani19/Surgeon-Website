@@ -14,8 +14,8 @@ export default function ContactPage() {
   return (
     <>
       <PhotoHero
-        image="/images/tablet-xray.jpg"
-        imageAlt="Physician reviewing an X-ray with a patient on a tablet"
+        image="/images/contact-welcome.jpg"
+        imageAlt="Doctor warmly shaking hands with a smiling patient during a consultation"
         eyebrow="Get In Touch"
         title="Contact & Scheduling"
       >
