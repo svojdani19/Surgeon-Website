@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { services, locations, doctor, siteUrl } from "@/lib/site";
+import { services, doctor, siteUrl } from "@/lib/site";
 import { articles } from "@/lib/articles";
 
 export function generateStaticParams() {
@@ -99,16 +99,13 @@ export default async function ServiceDetailPage({
                 </li>
               ))}
             </ul>
-            <div className="mt-6 space-y-2">
-              {locations.map((loc) => (
-                <a
-                  key={loc.slug}
-                  href={loc.phoneHref}
-                  className="block rounded-md bg-brand-700 px-4 py-2 text-center text-sm font-semibold text-white hover:bg-brand-800"
-                >
-                  {loc.shortName}: {loc.phoneDisplay}
-                </a>
-              ))}
+            <div className="mt-6">
+              <a
+                href={doctor.schedulingPhoneHref}
+                className="block rounded-md bg-brand-700 px-4 py-2 text-center text-sm font-semibold text-white hover:bg-brand-800"
+              >
+                Call {doctor.schedulingPhoneDisplay}
+              </a>
             </div>
             {relatedArticles.length > 0 && (
               <div className="mt-8 border-t border-brand-100 pt-6">
