@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Container from "./Container";
 import { doctor } from "@/lib/site";
@@ -15,13 +16,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-100 bg-white/95 backdrop-blur">
       <Container className="flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex flex-col leading-tight">
-          <span className="font-serif text-lg font-bold text-brand-900">
-            {doctor.name}
-          </span>
-          <span className="text-xs text-brand-600">
-            Hip &amp; Knee Replacement · Atlanta, GA
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/total-joint-logo.png"
+            alt="Total Joint Specialists"
+            width={1910}
+            height={500}
+            priority
+            className="h-11 w-auto"
+          />
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
