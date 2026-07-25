@@ -5,6 +5,7 @@ import { doctor } from "@/lib/site";
 const navLinks = [
   { href: "/about", label: "About Dr. Vojdani" },
   { href: "/services", label: "Hip & Knee Care" },
+  { href: "/education", label: "Education" },
   { href: "/locations", label: "Locations" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },

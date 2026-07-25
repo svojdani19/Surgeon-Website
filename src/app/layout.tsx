@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -31,9 +31,14 @@ export const metadata: Metadata = {
     title: "Sam Vojdani, MD | Hip & Knee Replacement Surgeon in Atlanta, GA",
     description:
       "Board-certified, fellowship-trained orthopedic surgeon specializing in hip and knee replacement in Atlanta, Georgia.",
-    images: [{ url: doctor.headshot }],
   },
   robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#1c3a5c",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -44,26 +49,58 @@ export default function RootLayout({
   const physicianSchema = {
     "@context": "https://schema.org",
     "@type": "Physician",
+    "@id": `${siteUrl}/#physician`,
     name: doctor.name,
+    honorificSuffix: "MD",
     image: `${siteUrl}${doctor.headshot}`,
     url: siteUrl,
     medicalSpecialty: "Orthopedic",
-    availableService: [
-      "Hip Replacement",
-      "Knee Replacement",
-      "Anterior Hip Replacement",
-      "Robotic-Assisted Joint Replacement",
-      "Revision Joint Replacement",
+    description:
+      "Board-certified, fellowship-trained orthopedic surgeon specializing in hip and knee joint replacement in Atlanta, Georgia.",
+    alumniOf: [
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Columbia University (Frank E. Stinchfield Adult Reconstruction Fellowship)",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Stony Brook University Hospital (Orthopedic Surgery Residency)",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Medical College of Georgia (Doctor of Medicine)",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Georgia Institute of Technology (Biology & Biomedical Engineering)",
+      },
     ],
-    memberOf: {
-      "@type": "MedicalOrganization",
-      name: doctor.practice,
-    },
+    award: [
+      "Castle Connolly Top Doctor",
+      "Alpha Omega Alpha Honor Society",
+      "Gold Humanism Honor Society",
+    ],
+    memberOf: [
+      { "@type": "MedicalOrganization", name: doctor.practice },
+      {
+        "@type": "Organization",
+        name: "American Academy of Orthopaedic Surgeons",
+      },
+      {
+        "@type": "Organization",
+        name: "American Association of Hip & Knee Surgeons",
+      },
+      { "@type": "Organization", name: "Georgia Orthopedic Society" },
+    ],
     worksFor: {
       "@type": "MedicalOrganization",
       name: doctor.practice,
     },
     telephone: doctor.phoneDisplay,
+    areaServed: {
+      "@type": "State",
+      name: "Georgia",
+    },
     location: locations.map((loc) => ({
       "@type": "MedicalClinic",
       name: loc.name,
@@ -79,12 +116,25 @@ export default function RootLayout({
     })),
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+    name: "Sam Vojdani, MD — Hip & Knee Replacement",
+    url: siteUrl,
+    publisher: { "@id": `${siteUrl}/#physician` },
+  };
+
   return (
     <html lang="en">
       <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <Header />
         <main>{children}</main>

@@ -55,6 +55,16 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/education" className="hover:text-white">
+                Patient Education
+              </Link>
+            </li>
+            <li>
+              <Link href="/service-areas" className="hover:text-white">
+                Areas We Serve
+              </Link>
+            </li>
+            <li>
               <Link href="/faq" className="hover:text-white">
                 Frequently Asked Questions
               </Link>

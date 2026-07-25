@@ -3,7 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
+import { CategoryIllustration, GoogleStars } from "@/components/MedicalIllustrations";
 import { doctor, locations, services, faqs } from "@/lib/site";
+import { articles } from "@/lib/articles";
+import { serviceAreas } from "@/lib/areas";
 
 export const metadata: Metadata = {
   title: "Hip & Knee Replacement Surgeon in Atlanta, GA",
@@ -30,7 +33,7 @@ const whyChoose = [
   },
   {
     title: "Two Convenient Atlanta-Area Locations",
-    body: "See Dr. Vojdani in Midtown Atlanta or Sandy Springs, with surgery performed at Northside Hospital Atlanta, Emory Johns Creek Hospital, and Total Joint Surgery Center – Cumming.",
+    body: "See Dr. Vojdani in Midtown Atlanta or Sandy Springs, with surgery performed at Total Joint Surgery Center – Atlanta, Northside Hospital Atlanta, and Meridian Mark Ambulatory Surgery Center.",
   },
   {
     title: "A Team-Based Approach to Recovery",
@@ -93,6 +96,18 @@ export default function HomePage() {
             <p className="mt-3 text-center text-sm text-brand-600">
               {doctor.name} — {doctor.title}
             </p>
+            <a
+              href={doctor.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-auto mt-3 flex w-fit items-center gap-2 rounded-full border border-brand-100 bg-white px-4 py-2 shadow-sm transition hover:shadow-md"
+            >
+              <GoogleStars />
+              <span className="text-sm font-semibold text-brand-900">
+                {doctor.googleRating} on Google
+              </span>
+              <span className="text-xs text-brand-500 underline">See reviews</span>
+            </a>
           </div>
         </Container>
       </section>
@@ -138,6 +153,49 @@ export default function HomePage() {
                 <p className="mt-2 text-brand-300">{item.body}</p>
               </div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-y border-brand-100 bg-brand-50/50 py-16">
+        <Container>
+          <div className="mx-auto max-w-3xl text-center">
+            <GoogleStars className="justify-center" />
+            <h2 className="mt-3 font-serif text-3xl font-bold text-brand-950">
+              Rated {doctor.googleRating} by Patients on Google
+            </h2>
+            <p className="mt-4 text-brand-700">
+              Patient trust is earned one recovery at a time. During his time on
+              faculty at Emory University, Dr. Vojdani was recognized among the
+              top 1% of physicians nationally in patient satisfaction, care, and
+              likelihood to recommend — and his patients&rsquo; own words on
+              Google tell the rest of the story.
+            </p>
+            <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href={doctor.googleReviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md bg-brand-700 px-6 py-3 font-semibold text-white hover:bg-brand-800"
+              >
+                Read Our Google Reviews
+              </a>
+              <Link
+                href="/about"
+                className="rounded-md border border-brand-700 px-6 py-3 font-semibold text-brand-700 hover:bg-brand-50"
+              >
+                Meet Dr. Vojdani
+              </Link>
+            </div>
+            <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-brand-600">
+              <li>Castle Connolly Top Doctor</li>
+              <li aria-hidden="true">·</li>
+              <li>Alpha Omega Alpha Honor Society</li>
+              <li aria-hidden="true">·</li>
+              <li>Gold Humanism Honor Society</li>
+              <li aria-hidden="true">·</li>
+              <li>Columbia Fellowship-Trained</li>
+            </ul>
           </div>
         </Container>
       </section>
@@ -198,6 +256,63 @@ export default function HomePage() {
                   </Link>
                 </div>
               </div>
+            ))}
+          </div>
+          <div className="mt-10">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-brand-500">
+              Proudly serving patients across metro Atlanta
+            </h3>
+            <ul className="mt-3 flex flex-wrap gap-x-2 gap-y-2 text-sm">
+              {serviceAreas.map((a, i) => (
+                <li key={a.slug} className="flex items-center gap-2">
+                  {i > 0 && <span aria-hidden="true" className="text-brand-300">·</span>}
+                  <Link
+                    href={`/service-areas/${a.slug}`}
+                    className="text-brand-600 hover:underline"
+                  >
+                    {a.city}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-brand-50 py-16">
+        <Container>
+          <div className="flex items-end justify-between">
+            <h2 className="font-serif text-3xl font-bold text-brand-950">
+              Patient Education Library
+            </h2>
+            <Link href="/education" className="text-sm font-semibold text-brand-600 hover:underline">
+              Browse all guides →
+            </Link>
+          </div>
+          <p className="mt-3 max-w-3xl text-brand-700">
+            Honest, surgeon-written answers to the questions patients actually
+            ask — recovery timelines, choosing between procedures, costs, and
+            when surgery is (and isn&rsquo;t) the right call.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {articles.slice(0, 6).map((a) => (
+              <Link
+                key={a.slug}
+                href={`/education/${a.slug}`}
+                className="group flex gap-4 rounded-xl border border-brand-100 bg-white p-5 transition hover:border-brand-400 hover:shadow-md"
+              >
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-500">
+                  <CategoryIllustration category={a.category} className="h-11 w-11" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-base font-semibold leading-snug text-brand-900 group-hover:text-brand-600">
+                    {a.title}
+                  </h3>
+                  <p className="mt-1 text-xs text-brand-500">
+                    {a.readingMinutes} min read
+                  </p>
+                </div>
+              </Link>
             ))}
           </div>
         </Container>

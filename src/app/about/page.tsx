@@ -120,13 +120,13 @@ export default function AboutPage() {
           </h2>
           <ul className="mt-4 grid gap-3 text-brand-800 sm:grid-cols-3">
             <li className="rounded-lg border border-brand-100 bg-white p-4">
+              Total Joint Surgery Center – Atlanta
+            </li>
+            <li className="rounded-lg border border-brand-100 bg-white p-4">
               Northside Hospital Atlanta
             </li>
             <li className="rounded-lg border border-brand-100 bg-white p-4">
-              Emory Johns Creek Hospital
-            </li>
-            <li className="rounded-lg border border-brand-100 bg-white p-4">
-              Total Joint Surgery Center – Cumming
+              Meridian Mark Ambulatory Surgery Center
             </li>
           </ul>
         </Container>

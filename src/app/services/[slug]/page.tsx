@@ -3,7 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
-import { services, locations } from "@/lib/site";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { services, locations, doctor, siteUrl } from "@/lib/site";
+import { articles } from "@/lib/articles";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -33,13 +35,44 @@ export default async function ServiceDetailPage({
   const service = services.find((s) => s.slug === slug);
   if (!service) notFound();
 
+  const relatedArticles = articles
+    .filter((a) => a.relatedServices.includes(service.slug))
+    .slice(0, 3);
+
+  const procedureSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    name: service.name,
+    description: service.summary,
+    url: `${siteUrl}/services/${service.slug}`,
+    procedureType: "https://schema.org/SurgicalProcedure",
+    bodyLocation: service.slug.includes("hip")
+      ? "Hip"
+      : service.slug.includes("knee")
+        ? "Knee"
+        : "Hip and Knee",
+    performer: {
+      "@type": "Physician",
+      "@id": `${siteUrl}/#physician`,
+      name: doctor.name,
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(procedureSchema) }}
+      />
       <section className="bg-brand-50 py-14">
         <Container>
-          <Link href="/services" className="text-sm font-semibold text-brand-600 hover:underline">
-            ← All Hip &amp; Knee Services
-          </Link>
+          <Breadcrumbs
+            crumbs={[
+              { name: "Home", href: "/" },
+              { name: "Hip & Knee Care", href: "/services" },
+              { name: service.shortName, href: `/services/${service.slug}` },
+            ]}
+          />
           <h1 className="mt-3 font-serif text-4xl font-bold text-brand-950">
             {service.name}
           </h1>
@@ -77,6 +110,25 @@ export default async function ServiceDetailPage({
                 </a>
               ))}
             </div>
+            {relatedArticles.length > 0 && (
+              <div className="mt-8 border-t border-brand-100 pt-6">
+                <h2 className="font-serif text-lg font-semibold text-brand-900">
+                  Patient Guides
+                </h2>
+                <ul className="mt-3 space-y-3">
+                  {relatedArticles.map((a) => (
+                    <li key={a.slug}>
+                      <Link
+                        href={`/education/${a.slug}`}
+                        className="text-sm font-semibold text-brand-600 hover:underline"
+                      >
+                        {a.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </aside>
         </Container>
       </section>

@@ -13,6 +13,14 @@ export const doctor = {
   schedulingPhoneDisplay: "(770) 292-6500",
   schedulingPhoneHref: "tel:+17702926500",
   headshot: "/images/sam-vojdani-md.jpeg",
+  /**
+   * Live Google reviews link — the badge on the landing page links here so
+   * visitors can verify the rating themselves. Replace with the exact
+   * Google Business Profile review link when available.
+   */
+  googleReviewUrl:
+    "https://www.google.com/search?q=%22Dr.+Sam+Vojdani%22+reviews",
+  googleRating: "5.0",
 };
 
 export type Location = {
@@ -231,7 +239,7 @@ export const faqs: { question: string; answer: string }[] = [
   {
     question: "What hospitals and surgery centers does Dr. Vojdani operate at?",
     answer:
-      "Dr. Vojdani is affiliated with Northside Hospital Atlanta, Emory Johns Creek Hospital, and Total Joint Surgery Center – Cumming, in addition to seeing patients at the Midtown Atlanta and Sandy Springs offices of Total Joint Specialists.",
+      "Dr. Vojdani performs surgery at Total Joint Surgery Center – Atlanta, Northside Hospital Atlanta, and Meridian Mark Ambulatory Surgery Center, in addition to seeing patients at the Midtown Atlanta and Sandy Springs offices of Total Joint Specialists.",
   },
   {
     question: "Does Dr. Vojdani treat revision (repeat) joint replacement cases?",

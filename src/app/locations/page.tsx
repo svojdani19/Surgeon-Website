@@ -21,9 +21,9 @@ export default function LocationsPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-brand-800">
             Dr. Sam Vojdani sees patients at two Total Joint Specialists
-            offices in metro Atlanta. Surgery is performed at Northside
-            Hospital Atlanta, Emory Johns Creek Hospital, and Total Joint
-            Surgery Center – Cumming.
+            offices in metro Atlanta. Surgery is performed at Total Joint
+            Surgery Center – Atlanta, Northside Hospital Atlanta, and
+            Meridian Mark Ambulatory Surgery Center.
           </p>
         </Container>
       </section>
