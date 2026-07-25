@@ -22,6 +22,7 @@ export const metadata: Metadata = {
  */
 const hipPath: { slug: string; stage: string }[] = [
   { slug: "when-is-it-time-for-hip-replacement", stage: "Deciding" },
+  { slug: "how-long-does-joint-replacement-last", stage: "Longevity" },
   { slug: "anterior-vs-posterior-hip-replacement", stage: "Choosing Your Approach" },
   { slug: "same-day-joint-replacement-candidacy", stage: "Planning" },
   { slug: "hip-replacement-cost-insurance-georgia", stage: "Costs & Insurance" },
@@ -32,6 +33,7 @@ const hipPath: { slug: string; stage: string }[] = [
 
 const kneePath: { slug: string; stage: string }[] = [
   { slug: "when-is-it-time-for-knee-replacement", stage: "Deciding" },
+  { slug: "how-long-does-joint-replacement-last", stage: "Longevity" },
   { slug: "partial-vs-total-knee-replacement", stage: "Choosing Your Surgery" },
   { slug: "robotic-knee-replacement-explained", stage: "Technology" },
   { slug: "same-day-joint-replacement-candidacy", stage: "Planning" },
