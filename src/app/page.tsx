@@ -52,9 +52,8 @@ export default function HomePage() {
             </h1>
             <p className="mt-5 text-lg text-brand-800">
               Board-certified and fellowship-trained, Dr. Vojdani specializes in
-              anterior hip replacement, quadriceps-sparing knee replacement, and
-              robotic-assisted joint replacement at Total Joint Specialists in
-              Midtown Atlanta and Sandy Springs.
+              anterior hip replacement, muscle-sparing knee replacement, and
+              technology-assisted joint replacement.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
