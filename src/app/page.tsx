@@ -24,18 +24,10 @@ const credentials = [
 ];
 
 const whyChoose = [
-  "Board-Certified Orthopedic Surgeon",
-  "Columbia Fellowship-Trained in Adult Reconstruction",
-  "Dedicated Exclusively to Hip & Knee Replacement",
-  "Minimally Invasive Anterior Hip Replacement",
-  "Quadriceps-Sparing Knee Replacement",
-  "Robotic & Computer-Assisted Surgery",
-  "Same-Day Outpatient Joint Replacement",
-  "Complex Revision & Second-Opinion Care",
-  "Multi-Modal Pain Control to Minimize Opioids",
-  "Castle Connolly Top Doctor",
-  "Team-Based Recovery with Coordinated PT",
-  "Offices in Midtown Atlanta & Sandy Springs",
+  "Fellowship-Trained",
+  "Exclusive Hip & Knee Care",
+  "Convenient Office Locations",
+  "Minimal Opioid Protocols",
 ];
 
 export default function HomePage() {
@@ -244,7 +236,7 @@ export default function HomePage() {
           </div>
           <div className="mt-10">
             <h3 className="text-sm font-semibold uppercase tracking-wide text-brand-500">
-              Proudly serving patients across metro Atlanta
+              Proudly serving patients across Georgia and surrounding areas
             </h3>
             <ul className="mt-3 flex flex-wrap gap-x-2 gap-y-2 text-sm">
               {serviceAreas.map((a, i) => (
