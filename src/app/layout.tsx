@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { siteUrl, doctor, locations } from "@/lib/site";
+import { siteUrl, doctor, locations, testimonials } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -115,6 +115,17 @@ export default function RootLayout({
       "@type": "State",
       name: "Georgia",
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: doctor.googleRating,
+      reviewCount: doctor.googleReviewCount,
+    },
+    review: testimonials.map((t) => ({
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: t.name },
+      reviewBody: t.quote,
+    })),
     location: locations.map((loc) => ({
       "@type": "MedicalClinic",
       name: loc.name,
