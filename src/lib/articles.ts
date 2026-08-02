@@ -684,6 +684,80 @@ export const articles: Article[] = [
       "when-is-it-time-for-knee-replacement",
     ],
   },
+  {
+    slug: "how-to-sleep-after-hip-or-knee-replacement",
+    title: "How to Sleep After Hip or Knee Replacement",
+    metaTitle: "How to Sleep After Hip or Knee Replacement",
+    metaDescription:
+      "Sleeping positions, pillow placement, and practical habits for better rest after hip or knee replacement — including when you can sleep on your side, from Atlanta surgeon Dr. Sam Vojdani.",
+    category: "Recovery",
+    readingMinutes: 6,
+    lastReviewed: "2026-08-02",
+    summary:
+      "Disrupted sleep is one of the most common — and least discussed — parts of joint replacement recovery. Here are the positions, pillow strategies, and habits that help, and how the guidance differs for hips and knees.",
+    sections: [
+      {
+        heading: "Why sleep gets harder before it gets better",
+        paragraphs: [
+          "Patients are often surprised that daytime pain becomes manageable well before nights do. Disturbed sleep after hip or knee replacement is common, and it usually has several overlapping causes: swelling and inflammation that build over the course of a day, the loss of your usual sleeping position, medications that alter normal sleep patterns, and a less active day than your body is used to.",
+          "The reassuring part is that this phase is temporary for most patients. Sleep typically improves over the first several weeks and continues to normalize over the following months as swelling settles and activity returns. Rough nights early on are a nuisance rather than a sign that something has gone wrong with the surgery.",
+        ],
+      },
+      {
+        heading: "Positions after hip replacement",
+        paragraphs: [
+          "Sleeping on your back is the simplest starting position after hip replacement. A pillow placed between or just under the knees keeps the leg from rolling outward and takes strain off the hip. Most patients can manage this position from the first night, even if it isn't their lifelong preference.",
+          "Side sleeping usually returns in stages. The non-operated side generally comes first, with a pillow between the knees to keep the hips aligned and prevent the operated leg from dropping across the body. Lying directly on the operated side tends to come later, once incision tenderness has faded. Because the direct anterior approach spares the muscles at the back of the hip, these patients often have fewer positional restrictions and return to side sleeping sooner than with traditional approaches — but the timing is your surgeon's call, and comfort is a reasonable guide: if lying on that side hurts or presses uncomfortably on the incision, you aren't ready yet.",
+          "Stomach sleeping is typically the last position to return, and many patients find it uncomfortable for months. There is no need to rush it.",
+        ],
+      },
+      {
+        heading: "Positions after knee replacement — and the pillow mistake to avoid",
+        paragraphs: [
+          "After knee replacement, the most important sleep principle is keeping the knee straight. It is tempting to prop a pillow under the knee because a slightly bent knee feels better, but resting for hours that way works against one of the main goals of early recovery: full extension. A knee that habitually rests bent becomes harder to straighten later, and losing extension is generally a more troublesome problem than losing a few degrees of bend.",
+          "If you want to elevate the leg to help with swelling, place the pillow under the calf and ankle so the knee stays straight, rather than under the knee itself. Sleeping on your back with the leg supported this way is the standard early position.",
+          "Side sleeping after a knee replacement usually becomes comfortable once bending improves and incision tenderness settles — often a few weeks in, though this varies considerably. Lying on the non-operated side with a pillow between the knees is the easier version. As with hips, your own surgeon's instructions take precedence over any general guide.",
+        ],
+      },
+      {
+        heading: "Habits that make a real difference",
+        paragraphs: [
+          "Time your pain medication so it is working when you are trying to fall asleep, rather than taking it after you are already awake and uncomfortable. Ice the joint in the evening — swelling accumulated over the day is a major reason nights feel worse than mornings — and spend some time with the leg elevated before bed.",
+          "Stay genuinely active during the day within your restrictions. Frequent short walks do more for night-time comfort than a day spent in a recliner, and they help re-establish a normal sleep drive. Keep the bedroom cool and dark, taper fluids in the evening to reduce trips to the bathroom, and be cautious with long daytime naps and late-day caffeine — both make an already fragile night harder.",
+          "If you plan to sleep downstairs or in a different bed during early recovery, set it up before surgery: a firm mattress at a height you can get on and off easily, a clear path to the bathroom, a lamp and phone within reach, and your pillows already positioned.",
+        ],
+      },
+      {
+        heading: "When disrupted sleep deserves a call",
+        paragraphs: [
+          "Ordinary post-operative sleep disturbance improves week over week. What deserves a call to your surgical team is a change in pattern: pain that is escalating rather than easing, new swelling or warmth in the leg, calf pain, fever, drainage from the incision, or shortness of breath. Those are not sleep problems — they are symptoms that need evaluation regardless of the hour.",
+          "It is also worth raising persistent insomnia at your follow-up visits rather than enduring it silently. Adjusting the timing or type of pain medication, managing swelling more aggressively, or reviewing your other medications can often help. Dr. Vojdani would far rather hear about a rough stretch of nights than have a patient assume it is simply the price of surgery.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How long does sleep stay disrupted after joint replacement?",
+        answer:
+          "Most patients notice steady improvement over the first several weeks, with sleep continuing to normalize over the following months as swelling settles and activity returns. Individual timelines vary widely.",
+      },
+      {
+        question: "Can I sleep on my side after hip replacement?",
+        answer:
+          "Usually yes, in stages — the non-operated side first, with a pillow between the knees, then the operated side once incision tenderness resolves. Muscle-sparing anterior approach patients often return to side sleeping sooner, but follow your own surgeon's timeline.",
+      },
+      {
+        question: "Should I put a pillow under my knee after knee replacement?",
+        answer:
+          "Not under the knee itself. Resting for long periods with the knee bent makes full straightening harder to regain. If you want to elevate the leg, place the pillow under the calf and ankle so the knee stays straight.",
+      },
+    ],
+    relatedServices: ["anterior-hip-replacement", "total-knee-replacement"],
+    relatedArticles: [
+      "knee-replacement-recovery-timeline",
+      "anterior-hip-replacement-recovery-timeline",
+    ],
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
