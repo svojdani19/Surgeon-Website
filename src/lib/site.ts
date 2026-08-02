@@ -1,6 +1,9 @@
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.georgiahipandknee.com";
 
+/** Update when a site-wide clinical or business review is completed. */
+export const siteLastReviewed = "2026-07-25";
+
 export const doctor = {
   name: "Sam Vojdani, MD",
   firstName: "Sam",
