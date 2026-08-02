@@ -29,6 +29,7 @@ const hipPath: { slug: string; stage: string }[] = [
   { slug: "hip-replacement-cost-insurance-georgia", stage: "Costs & Insurance" },
   { slug: "preparing-for-joint-replacement-surgery", stage: "Preparing for Surgery" },
   { slug: "anterior-hip-replacement-recovery-timeline", stage: "Recovery" },
+  { slug: "how-to-sleep-after-hip-or-knee-replacement", stage: "Recovery" },
   { slug: "signs-of-failed-knee-or-hip-replacement", stage: "Long-Term" },
 ];
 
@@ -41,6 +42,7 @@ const kneePath: { slug: string; stage: string }[] = [
   { slug: "hip-replacement-cost-insurance-georgia", stage: "Costs & Insurance" },
   { slug: "preparing-for-joint-replacement-surgery", stage: "Preparing for Surgery" },
   { slug: "knee-replacement-recovery-timeline", stage: "Recovery" },
+  { slug: "how-to-sleep-after-hip-or-knee-replacement", stage: "Recovery" },
   { slug: "signs-of-failed-knee-or-hip-replacement", stage: "Long-Term" },
 ];
 
