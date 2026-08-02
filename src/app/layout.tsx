@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   },
   description:
     "Dr. Sam Vojdani is a board-certified, fellowship-trained orthopedic surgeon specializing in hip and knee replacement at Total Joint Specialists in Midtown Atlanta and Sandy Springs, Georgia.",
+  applicationName: "Sam Vojdani, MD — Hip & Knee Replacement",
+  authors: [{ name: doctor.name, url: "/about" }],
+  creator: doctor.name,
+  publisher: doctor.practice,
+  category: "healthcare",
   keywords: [
     "hip replacement Atlanta",
     "knee replacement Atlanta",
@@ -34,8 +39,34 @@ export const metadata: Metadata = {
     title: "Sam Vojdani, MD | Hip & Knee Replacement Surgeon in Atlanta, GA",
     description:
       "Board-certified, fellowship-trained orthopedic surgeon specializing in hip and knee replacement in Atlanta, Georgia.",
+    locale: "en_US",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Sam Vojdani, MD — Hip and knee replacement surgeon in Atlanta, Georgia",
+      },
+    ],
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sam Vojdani, MD | Hip & Knee Replacement Surgeon in Atlanta",
+    description:
+      "Board-certified, fellowship-trained orthopedic surgeon specializing in hip and knee replacement in Atlanta, Georgia.",
+    images: ["/opengraph-image"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export const viewport: Viewport = {
@@ -137,6 +168,7 @@ export default function RootLayout({
     name: "Sam Vojdani, MD — Hip & Knee Replacement",
     url: siteUrl,
     publisher: { "@id": `${siteUrl}/#physician` },
+    inLanguage: "en-US",
   };
 
   return (

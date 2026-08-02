@@ -6,7 +6,7 @@ import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { serviceAreas, getArea } from "@/lib/areas";
-import { doctor, locations, services } from "@/lib/site";
+import { doctor, locations, services, siteUrl } from "@/lib/site";
 import { articles } from "@/lib/articles";
 
 export function generateStaticParams() {
@@ -25,6 +25,12 @@ export async function generateMetadata({
     title: `Hip & Knee Replacement in ${area.city}, GA`,
     description: area.metaDescription,
     alternates: { canonical: `/service-areas/${area.slug}` },
+    openGraph: {
+      type: "website",
+      title: `Hip & Knee Replacement in ${area.city}, GA`,
+      description: area.metaDescription,
+      url: `${siteUrl}/service-areas/${area.slug}`,
+    },
   };
 }
 

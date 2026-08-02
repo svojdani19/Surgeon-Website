@@ -24,6 +24,13 @@ export async function generateMetadata({
     title: service.name,
     description: service.metaDescription,
     alternates: { canonical: `/services/${service.slug}` },
+    openGraph: {
+      type: "website",
+      title: `${service.name} in Atlanta, GA`,
+      description: service.metaDescription,
+      url: `${siteUrl}/services/${service.slug}`,
+      images: [{ url: serviceImage(service.slug).src, alt: serviceImage(service.slug).alt }],
+    },
   };
 }
 
@@ -57,6 +64,7 @@ export default async function ServiceDetailPage({
       "@id": `${siteUrl}/#physician`,
       name: doctor.name,
     },
+    mainEntityOfPage: `${siteUrl}/services/${service.slug}`,
   };
 
   return (

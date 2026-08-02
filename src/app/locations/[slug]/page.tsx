@@ -22,6 +22,12 @@ export async function generateMetadata({
     title: `${loc.shortName} Office | Dr. Sam Vojdani, MD`,
     description: `Visit Dr. Sam Vojdani's ${loc.shortName} office at ${loc.addressLine1}, ${loc.city}, ${loc.state} ${loc.zip} for hip and knee replacement consultations.`,
     alternates: { canonical: `/locations/${loc.slug}` },
+    openGraph: {
+      type: "website",
+      title: `${loc.shortName} Orthopedic Office | Dr. Sam Vojdani`,
+      description: `Hip and knee replacement consultations at ${loc.addressLine1}, ${loc.city}, ${loc.state}.`,
+      url: `${siteUrl}/locations/${loc.slug}`,
+    },
   };
 }
 
@@ -48,7 +54,9 @@ export default async function LocationDetailPage({
       addressCountry: "US",
     },
     url: `${siteUrl}/locations/${loc.slug}`,
-    physician: { "@type": "Physician", name: doctor.name },
+    image: `${siteUrl}${doctor.headshot}`,
+    medicalSpecialty: "Orthopedic",
+    physician: { "@id": `${siteUrl}/#physician`, "@type": "Physician", name: doctor.name },
   };
 
   return (
