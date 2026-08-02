@@ -65,8 +65,7 @@ export default function RootLayout({
       "https://health.usnews.com/doctors/sam-vojdani-2630262",
       "https://www.vitals.com/doctors/1zjc70/saman-vojdani",
       "https://providers.northside.com/provider/sam-vojdani/2605298",
-      "https://www.totaljointspecialists.com/provider/sam-vojdani-md",
-      "https://www.totaljointspecialist.com/surgeons/sam-vojdani",
+      "https://www.totaljointspecialists.com/our-surgeons/sam-vojdani-md",
     ],
     medicalSpecialty: "Orthopedic",
     description:
