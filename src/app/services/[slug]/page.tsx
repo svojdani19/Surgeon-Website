@@ -5,7 +5,13 @@ import { notFound } from "next/navigation";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { services, serviceImage, doctor, siteUrl } from "@/lib/site";
+import {
+  services,
+  serviceImage,
+  doctor,
+  siteUrl,
+  procedureDetails,
+} from "@/lib/site";
 import { articles } from "@/lib/articles";
 
 export function generateStaticParams() {
@@ -64,6 +70,9 @@ export default async function ServiceDetailPage({
       "@id": `${siteUrl}/#physician`,
       name: doctor.name,
     },
+    // Substantive procedure detail where we have it, so the markup describes
+    // the operation rather than just naming it.
+    ...(procedureDetails[service.slug] ?? {}),
     mainEntityOfPage: `${siteUrl}/services/${service.slug}`,
   };
 

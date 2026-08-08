@@ -351,6 +351,84 @@ export const services: Service[] = [
   },
 ];
 
+/**
+ * Schema-only detail for MedicalProcedure markup, keyed by service slug.
+ * Kept separate from `services` because none of it renders as page copy —
+ * it exists to make the structured data substantive rather than a stub.
+ * Every statement is standard, non-promissory orthopedic description;
+ * nothing here asserts an outcome rate or a guarantee.
+ */
+export const procedureDetails: Record<
+  string,
+  {
+    howPerformed: string;
+    preparation: string;
+    followup: string;
+    expectedPrognosis: string;
+  }
+> = {
+  "anterior-hip-replacement": {
+    howPerformed:
+      "The hip joint is reached from the front through a natural interval between muscles, without detaching the major muscles that stabilize the hip. The worn femoral head and acetabular surface are replaced with implant components, with the patient positioned face-up so imaging can be used to check implant position and leg length during surgery.",
+    preparation:
+      "Pre-operative medical clearance and laboratory testing, review of all medications and supplements for those requiring a stop date, strengthening exercises in the weeks before surgery, and preparation of the home for the first week of recovery.",
+    followup:
+      "Walking begins the day of surgery. Follow-up visits track wound healing, gait, and strength, with physical therapy focused on walking quality and hip strength. Driving and return to work are cleared individually.",
+    expectedPrognosis:
+      "Most patients experience substantial relief of arthritis pain and improved walking ability, with recovery continuing over six to twelve months. Individual results vary with age, health, and pre-operative function.",
+  },
+  "total-knee-replacement": {
+    howPerformed:
+      "The worn surfaces of the femur and tibia, and often the underside of the kneecap, are resurfaced with implant components using a quadriceps-sparing technique that limits disruption to the extensor mechanism. Implant alignment is planned around the patient's individual anatomy and soft-tissue balance.",
+    preparation:
+      "Pre-operative medical clearance and laboratory testing, medication review, quadriceps and hip strengthening before surgery, and home preparation including a plan for ice, elevation, and assistance during the first week.",
+    followup:
+      "Walking begins the day of surgery. Early recovery prioritizes regaining full extension and progressively increasing flexion, supported by structured physical therapy and multi-modal pain control.",
+    expectedPrognosis:
+      "Modern total knee replacement reliably relieves arthritis pain and restores function for most patients, though knee recovery requires consistent motion work and stiffness after activity can persist for months. Individual results vary.",
+  },
+  "partial-knee-replacement": {
+    howPerformed:
+      "Only the arthritic compartment of the knee is resurfaced, preserving the healthy compartments, the cruciate ligaments, and more of the patient's natural bone. Candidacy requires arthritis confined to one compartment, an intact anterior cruciate ligament, and correctable alignment.",
+    preparation:
+      "Imaging and examination to confirm that arthritis is limited to a single compartment, standard pre-operative medical clearance, medication review, and home preparation.",
+    followup:
+      "Walking begins the day of surgery, with many patients suitable for same-day discharge. Physical therapy emphasizes restoring motion and strength around a knee that retains its natural ligaments.",
+    expectedPrognosis:
+      "Well-selected patients often report a knee that feels closer to natural than a total replacement, with recovery typically quicker in the early weeks. Arthritis can progress in the untreated compartments over time; individual results vary.",
+  },
+  "robotic-assisted-surgery": {
+    howPerformed:
+      "A three-dimensional model of the joint is combined with a robotic arm or computer guidance system that constrains the surgical instruments to the surgeon's pre-operative plan. The surgeon makes every operative decision; the technology assists in executing the plan precisely and provides feedback on soft-tissue balance.",
+    preparation:
+      "Standard pre-operative medical clearance and medication review, together with any imaging required to build the pre-operative plan.",
+    followup:
+      "Recovery follows the pathway for the underlying hip or knee replacement, including early walking, structured physical therapy, and staged clearance for driving and work.",
+    expectedPrognosis:
+      "Robotic assistance improves the precision of implant placement. Whether that precision produces better long-term outcomes for every patient remains under study, and surgeon experience and rehabilitation effort remain the primary drivers of results.",
+  },
+  "outpatient-same-day-joint-replacement": {
+    howPerformed:
+      "Hip or knee replacement is performed using muscle-sparing technique, regional anesthesia, and multi-modal pain control designed to avoid heavy narcotics, followed by physical therapy the same afternoon. Patients who are medically stable, walking safely, and comfortable are discharged home the day of surgery.",
+    preparation:
+      "Candidacy screening covering medical conditions, baseline mobility, and home support, in addition to standard pre-operative clearance, medication review, and arrangement of a capable adult at home for the first night or two.",
+    followup:
+      "Discharge with written instructions, medications arranged, and therapy scheduled, with the care team reachable by phone and follow-up visits tracking progress.",
+    expectedPrognosis:
+      "For appropriately selected patients, published research reports complication rates comparable to inpatient joint replacement. Candidacy screening exists to maintain that safety, and not every patient is a suitable candidate.",
+  },
+  "revision-joint-replacement": {
+    howPerformed:
+      "Failed or worn components are removed and replaced, with reconstruction of bone loss where present. Planning draws on comparison of serial radiographs, blood testing to screen for infection, joint aspiration or advanced imaging where indicated, and review of the original operative record including implant make and model.",
+    preparation:
+      "Collection of prior operative reports and radiographs, infection workup, medical optimization, and coordination with infectious disease specialists when infection is suspected.",
+    followup:
+      "Recovery is generally longer and more individualized than after first-time replacement, guided by what was reconstructed and the quality of remaining bone.",
+    expectedPrognosis:
+      "Revision surgery is a well-established procedure, and identifying problems before significant bone loss keeps reconstruction simpler. Outcomes vary considerably with the reason for failure and the condition of the surrounding bone.",
+  },
+};
+
 export const faqs: { question: string; answer: string }[] = [
   {
     question: "How do I know if it's time for a hip or knee replacement?",
