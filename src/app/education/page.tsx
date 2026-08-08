@@ -22,6 +22,7 @@ export const metadata: Metadata = {
  * preparing → recovering → long-term. Shared guides appear in both paths.
  */
 const hipPath: { slug: string; stage: string }[] = [
+  { slug: "hip-pain-or-back-pain-which-is-it", stage: "Understanding Your Pain" },
   { slug: "when-is-it-time-for-hip-replacement", stage: "Deciding" },
   { slug: "how-long-does-joint-replacement-last", stage: "Longevity" },
   { slug: "anterior-vs-posterior-hip-replacement", stage: "Choosing Your Approach" },
@@ -34,6 +35,10 @@ const hipPath: { slug: string; stage: string }[] = [
 ];
 
 const kneePath: { slug: string; stage: string }[] = [
+  {
+    slug: "bone-on-bone-knee-arthritis-options",
+    stage: "Understanding Your Pain",
+  },
   { slug: "when-is-it-time-for-knee-replacement", stage: "Deciding" },
   { slug: "how-long-does-joint-replacement-last", stage: "Longevity" },
   { slug: "partial-vs-total-knee-replacement", stage: "Choosing Your Surgery" },

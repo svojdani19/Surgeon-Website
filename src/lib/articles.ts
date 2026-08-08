@@ -780,6 +780,148 @@ export const articles: Article[] = [
       "anterior-hip-replacement-recovery-timeline",
     ],
   },
+  {
+    slug: "bone-on-bone-knee-arthritis-options",
+    title: "\"Bone on Bone\" Knee Arthritis: What Your Options Actually Are",
+    metaTitle: "Bone on Bone Knee Arthritis: Treatment Options",
+    metaDescription:
+      "Told your knee is bone on bone? What the phrase actually means, which non-surgical treatments still help at that stage, and when replacement becomes the better trade — from Atlanta knee surgeon Dr. Sam Vojdani.",
+    category: "Deciding",
+    readingMinutes: 7,
+    lastReviewed: "2026-08-08",
+    summary:
+      "\"Bone on bone\" sounds like a verdict, but it describes an X-ray — not a treatment plan. Here's what still helps at that stage, what doesn't, and how to judge when replacement is worth it.",
+    sections: [
+      {
+        heading: "What \"bone on bone\" actually describes",
+        paragraphs: [
+          "The phrase describes an X-ray finding: the cartilage that normally cushions the ends of your thigh bone and shin bone has worn thin enough that the bones appear to touch, with little or no visible joint space between them. It is a description of what the imaging shows, not a diagnosis of how much trouble you are in.",
+          "That distinction matters more than most patients expect, because X-ray severity and symptoms correlate loosely. Some people with dramatic-looking films walk, work, and sleep reasonably well. Others with more moderate changes are genuinely limited. What guides treatment is the combination of imaging, examination, and — above all — what the knee is costing you day to day.",
+        ],
+      },
+      {
+        heading: "What still helps at this stage",
+        paragraphs: [
+          "Advanced arthritis does not make conservative care pointless. Strengthening the quadriceps and hip muscles reduces the load the joint absorbs with every step, and it remains worthwhile even when cartilage loss is severe. Weight management has an outsized effect at the knee, because forces across the joint are a multiple of body weight during walking and stair climbing. Activity modification — shifting from repetitive impact toward cycling, swimming, or an elliptical — often buys meaningful comfort without giving up conditioning.",
+          "Anti-inflammatory medication, when your physician agrees it is safe for you, can make a genuine difference in daily function. A cane used in the hand opposite the painful knee is underrated and unloads the joint more than most patients believe. None of this regrows cartilage, and it is fair to be told so plainly — but it can extend the period during which the knee is livable.",
+        ],
+      },
+      {
+        heading: "Injections: what they can and cannot do",
+        paragraphs: [
+          "Corticosteroid injections reduce inflammation and can relieve pain, though the benefit is temporary and varies widely between patients. Hyaluronic acid injections are sometimes offered for knee arthritis; evidence for them is mixed, and coverage varies by insurer. Neither reverses arthritis or rebuilds the joint surface.",
+          "Injections are best understood as a way to buy time and comfort, not as an alternative to definitive treatment when the joint is worn out. One practical detail worth knowing early: a recent injection may require a waiting interval before joint replacement surgery to reduce infection risk, so it is worth discussing timing with your surgeon rather than scheduling injections indefinitely.",
+        ],
+      },
+      {
+        heading: "When replacement becomes the better trade",
+        paragraphs: [
+          "Knee replacement is elective, which means the decision is yours and the timing is a judgment about trade-offs. The signals that usually tip the balance are consistent: pain most days despite medication, pain at night that disturbs sleep, taking stairs one at a time, declining walking distance, and skipping things you value because of the knee. When several of those line up alongside advanced changes on X-ray, continuing to repeat conservative care tends to have diminishing returns.",
+          "There is also a cost to waiting indefinitely. Prolonged limping and inactivity erode quadriceps strength, and patients who arrive at surgery stronger generally recover faster. That is not an argument for rushing — it is an argument for deciding deliberately rather than drifting.",
+        ],
+      },
+      {
+        heading: "What the X-ray does not tell you",
+        paragraphs: [
+          "A film cannot tell you whether your arthritis is confined to one compartment of the knee or involves all three, and that distinction determines whether a partial knee replacement is even a possibility. It cannot assess ligament integrity, alignment that might be correctable, or whether some of your pain is referred from the hip or spine. Those require an examination.",
+          "If you have been told your knee is bone on bone, a consultation is worth having even if you are not ready to schedule surgery. It converts a phrase into an actual plan — which may well be a structured non-surgical program with a re-check rather than an operation.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Can bone-on-bone knee arthritis be treated without surgery?",
+        answer:
+          "Symptoms can often be improved without surgery through strengthening, weight management, activity modification, anti-inflammatory medication, and injections. None of these restore lost cartilage, but many patients manage acceptably on them for a period of time.",
+      },
+      {
+        question: "Does bone on bone always mean I need a knee replacement?",
+        answer:
+          "No. The X-ray finding alone does not decide. Surgeons weigh imaging together with your examination and how much the knee limits your daily life — some patients with advanced-looking X-rays function well and reasonably choose to wait.",
+      },
+      {
+        question: "How long can I wait once my knee is bone on bone?",
+        answer:
+          "There is rarely a hard deadline. The trade-off is that prolonged pain and inactivity weaken the muscles around the knee, which can make recovery slower. Discussing timing with a surgeon helps you choose deliberately rather than by default.",
+      },
+    ],
+    relatedServices: ["total-knee-replacement", "partial-knee-replacement"],
+    relatedArticles: [
+      "when-is-it-time-for-knee-replacement",
+      "partial-vs-total-knee-replacement",
+    ],
+  },
+  {
+    slug: "hip-pain-or-back-pain-which-is-it",
+    title: "Is It My Hip or My Back? How to Tell Where the Pain Is Coming From",
+    metaTitle: "Hip Pain vs Back Pain: How to Tell the Difference",
+    metaDescription:
+      "Hip arthritis and spine problems cause overlapping pain and are often confused. Where each typically hurts, which movements provoke them, and how the distinction gets sorted out — from Atlanta hip surgeon Dr. Sam Vojdani.",
+    category: "Deciding",
+    readingMinutes: 6,
+    lastReviewed: "2026-08-08",
+    summary:
+      "Hip arthritis and lumbar spine problems produce overlapping symptoms, and patients are often treated for the wrong one for months. Here is how the two typically differ — and why examination matters more than imaging.",
+    sections: [
+      {
+        heading: "Why these two get confused so often",
+        paragraphs: [
+          "The hip joint and the lower spine sit close together, share overlapping nerve supply, and can each refer pain into the buttock, groin, and thigh. It is genuinely common for a patient to spend months in treatment for one while the other is the actual source — and not unusual for both to be contributing at once.",
+          "Imaging alone rarely settles it. Most adults past middle age have some degenerative change visible on both hip and lumbar spine films, so a radiologist's report describing arthritis in either place does not establish which one is generating your symptoms. The examination is what sorts it out.",
+        ],
+      },
+      {
+        heading: "Where hip arthritis typically hurts",
+        paragraphs: [
+          "The most characteristic location for hip joint arthritis is the groin, often described as a deep ache rather than a sharp pain. It commonly extends into the front of the thigh and sometimes as far as the knee — hip arthritis presenting as knee pain is a well-recognized pattern that catches patients and clinicians out.",
+          "Hip pain is usually provoked by weight-bearing and rotation: pivoting, getting out of a car, rolling over in bed. Two everyday signs point strongly at the joint itself — difficulty putting on shoes and socks because the hip will not bend and rotate far enough, and groin pain when you first stand after sitting. Stiffness after inactivity that eases as you move is also typical.",
+        ],
+      },
+      {
+        heading: "What tends to point at the spine instead",
+        paragraphs: [
+          "Pain that begins in the low back or buttock and travels down the back of the leg past the knee, particularly with numbness, tingling, or weakness in the foot, suggests a nerve origin in the spine rather than the hip joint. Symptoms that change with spine position — worse with prolonged standing or walking and relieved by sitting or leaning forward on a cart — fit a spinal pattern.",
+          "Pain that is present regardless of whether you are bearing weight, or that is provoked by coughing or sneezing, also points away from the joint. Notably, spine-driven leg pain often spares the groin, which is where hip arthritis concentrates.",
+        ],
+      },
+      {
+        heading: "When both are true at once",
+        paragraphs: [
+          "Hip and spine degeneration frequently coexist, and one can aggravate the other: a stiff, painful hip changes how you walk and stand, which loads the lower back differently. Sorting out which is dominant is a common reason for referral, and the answer sometimes determines which problem to treat first rather than which one to treat at all.",
+          "Clinicians use a combination of examination findings, the pattern of provocation, and sometimes a diagnostic injection of local anesthetic into the hip joint — if the pain substantially disappears for the duration of the anesthetic, the joint is implicated. That is a practical way to answer the question when the picture is genuinely mixed.",
+        ],
+      },
+      {
+        heading: "What to bring to an evaluation",
+        paragraphs: [
+          "Be prepared to describe exactly where the pain sits — point to it with one finger if you can — what movements reliably bring it on, whether it travels below the knee, whether it wakes you at night, and whether shoes and socks have become difficult. Those details do more diagnostic work than most patients realize.",
+          "This article describes typical patterns, not a way to diagnose yourself; the exceptions are common enough that examination remains necessary. If you have been treated for one of these without improvement, having the other evaluated is a reasonable next step.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Can hip arthritis cause lower back pain?",
+        answer:
+          "Yes, indirectly. A stiff or painful hip alters how you walk and stand, which can load the lower back differently and produce back symptoms. The two conditions also frequently coexist independently.",
+      },
+      {
+        question: "Does hip arthritis cause pain down the leg?",
+        answer:
+          "Hip arthritis commonly refers pain into the front of the thigh and sometimes to the knee. Pain travelling down the back of the leg below the knee, especially with numbness or tingling, more often suggests a spinal nerve origin.",
+      },
+      {
+        question: "Why does my knee hurt if the problem is my hip?",
+        answer:
+          "Referred pain from the hip joint to the knee is a well-recognized pattern, owing to shared nerve supply. It is one reason an unexplained knee complaint sometimes prompts examination of the hip.",
+      },
+    ],
+    relatedServices: ["anterior-hip-replacement"],
+    relatedArticles: [
+      "when-is-it-time-for-hip-replacement",
+      "anterior-hip-replacement-recovery-timeline",
+    ],
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
