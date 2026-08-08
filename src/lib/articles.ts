@@ -5,8 +5,18 @@ export type Article = {
   metaDescription: string;
   category: "Hip" | "Knee" | "Recovery" | "Deciding";
   readingMinutes: number;
-  /** ISO date of the most recent medical review by Dr. Vojdani. */
+  /**
+   * ISO date this article was last reviewed (if physicianReviewed) or last
+   * updated. Drives dateModified and the sitemap's lastModified.
+   */
   lastReviewed: string;
+  /**
+   * True only when Dr. Vojdani has personally read this article. Gates the
+   * "Medically reviewed by" byline and the schema.org reviewedBy/author
+   * Physician fields. Defaults to false: an article published without his
+   * review must never claim one, in the page text or in the structured data.
+   */
+  physicianReviewed?: boolean;
   summary: string;
   /** Section heading + paragraphs. Rendered as h2 + p's. */
   sections: { heading: string; paragraphs: string[] }[];
@@ -26,6 +36,7 @@ export const articles: Article[] = [
     category: "Recovery",
     readingMinutes: 7,
     lastReviewed: "2026-07-25",
+    physicianReviewed: true,
     summary:
       "A realistic week-by-week look at recovery after minimally invasive anterior hip replacement — from the first steps on surgery day to returning to the activities you love.",
     sections: [
@@ -90,6 +101,7 @@ export const articles: Article[] = [
     category: "Deciding",
     readingMinutes: 6,
     lastReviewed: "2026-07-25",
+    physicianReviewed: true,
     summary:
       "Hip replacement is elective — you choose when the time is right. These seven signs help you recognize when arthritis is taking more from your life than conservative care can give back.",
     sections: [
@@ -146,6 +158,7 @@ export const articles: Article[] = [
     category: "Hip",
     readingMinutes: 6,
     lastReviewed: "2026-07-25",
+    physicianReviewed: true,
     summary:
       "Both approaches produce excellent long-term results. The differences lie in the early recovery, movement precautions, and which anatomy each suits best.",
     sections: [
@@ -198,6 +211,7 @@ export const articles: Article[] = [
     category: "Knee",
     readingMinutes: 6,
     lastReviewed: "2026-07-25",
+    physicianReviewed: true,
     summary:
       "Partial knee replacement preserves more of your natural knee but only works when arthritis is confined to one compartment. Here's how surgeons decide — and what each option means for you.",
     sections: [
@@ -249,6 +263,7 @@ export const articles: Article[] = [
     category: "Deciding",
     readingMinutes: 6,
     lastReviewed: "2026-07-25",
+    physicianReviewed: true,
     summary:
       "Knee replacement is worth it when arthritis costs you more than surgery would — here's how to weigh that honestly, and what conservative options deserve a real trial first.",
     sections: [
@@ -300,6 +315,7 @@ export const articles: Article[] = [
     category: "Recovery",
     readingMinutes: 7,
     lastReviewed: "2026-07-25",
+    physicianReviewed: true,
     summary:
       "Knee replacement recovery rewards consistent work. This week-by-week guide sets realistic expectations — including the honest truth that knees grumble longer than hips.",
     sections: [
@@ -363,6 +379,7 @@ export const articles: Article[] = [
     category: "Deciding",
     readingMinutes: 5,
     lastReviewed: "2026-07-25",
+    physicianReviewed: true,
     summary:
       "Most healthy joint replacement patients can now recover at home from day one. Here's how surgeons decide who's a safe candidate for the outpatient pathway.",
     sections: [
@@ -413,6 +430,7 @@ export const articles: Article[] = [
     category: "Knee",
     readingMinutes: 5,
     lastReviewed: "2026-07-25",
+    physicianReviewed: true,
     summary:
       "The robot doesn't perform your surgery — your surgeon does. Here's what robotic assistance genuinely adds to knee replacement, and what remains marketing.",
     sections: [
@@ -463,6 +481,7 @@ export const articles: Article[] = [
     category: "Deciding",
     readingMinutes: 5,
     lastReviewed: "2026-07-25",
+    physicianReviewed: true,
     summary:
       "Joint replacement is one of medicine's best-covered procedures. Here's how coverage typically works in Georgia and the questions worth asking before you schedule.",
     sections: [
@@ -514,6 +533,7 @@ export const articles: Article[] = [
     category: "Recovery",
     readingMinutes: 6,
     lastReviewed: "2026-07-25",
+    physicianReviewed: true,
     summary:
       "The four to six weeks before surgery are an opportunity: patients who prepare well recover faster. Here's the practical checklist.",
     sections: [
@@ -572,6 +592,7 @@ export const articles: Article[] = [
     category: "Deciding",
     readingMinutes: 5,
     lastReviewed: "2026-07-25",
+    physicianReviewed: true,
     summary:
       "Most joint replacements last decades — but implants can loosen, wear, or become infected. Knowing the warning signs gets problems evaluated while they're most treatable.",
     sections: [
@@ -623,6 +644,7 @@ export const articles: Article[] = [
     category: "Deciding",
     readingMinutes: 6,
     lastReviewed: "2026-07-25",
+    physicianReviewed: true,
     summary:
       "Modern implants routinely outlast the old '10-year' rule of thumb. Here's what large registry studies actually show, what shortens an implant's life, and what you can do to protect yours.",
     sections: [

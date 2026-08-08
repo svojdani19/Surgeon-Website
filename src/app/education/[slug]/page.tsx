@@ -56,18 +56,31 @@ export default async function ArticlePage({
     headline: article.title,
     description: article.metaDescription,
     url: `${siteUrl}/education/${article.slug}`,
-    author: {
-      "@type": "Physician",
-      name: doctor.name,
-      url: `${siteUrl}/about`,
-      medicalSpecialty: "Orthopedic",
-    },
-    reviewedBy: {
-      "@type": "Physician",
-      name: doctor.name,
-      url: `${siteUrl}/about`,
-    },
-    lastReviewed: article.lastReviewed,
+    // Only a physician-reviewed article may name a Physician as author or
+    // reviewer. Without review the practice is the author, and reviewedBy /
+    // lastReviewed are omitted rather than asserted.
+    author: article.physicianReviewed
+      ? {
+          "@type": "Physician",
+          name: doctor.name,
+          url: `${siteUrl}/about`,
+          medicalSpecialty: "Orthopedic",
+        }
+      : {
+          "@type": "Organization",
+          name: `${doctor.name} — ${doctor.practice}`,
+          url: siteUrl,
+        },
+    ...(article.physicianReviewed
+      ? {
+          reviewedBy: {
+            "@type": "Physician",
+            name: doctor.name,
+            url: `${siteUrl}/about`,
+          },
+          lastReviewed: article.lastReviewed,
+        }
+      : {}),
     dateModified: article.lastReviewed,
     publisher: {
       "@type": "Organization",
@@ -126,33 +139,52 @@ export default async function ArticlePage({
             </div>
           </div>
           <p className="mt-4 max-w-3xl text-lg text-brand-800">{article.summary}</p>
-          <div className="mt-6 flex items-center gap-3">
-            <Image
-              src={doctor.headshot}
-              alt={doctor.name}
-              width={44}
-              height={44}
-              className="h-11 w-11 rounded-full object-cover"
-            />
-            <div className="text-sm">
+          {article.physicianReviewed ? (
+            <div className="mt-6 flex items-center gap-3">
+              <Image
+                src={doctor.headshot}
+                alt={doctor.name}
+                width={44}
+                height={44}
+                className="h-11 w-11 rounded-full object-cover"
+              />
+              <div className="text-sm">
+                <p className="font-semibold text-brand-900">
+                  Medically reviewed by{" "}
+                  <Link href="/about" className="underline hover:text-brand-600">
+                    {doctor.name}
+                  </Link>
+                </p>
+                <p className="text-brand-600">
+                  Board-Certified Orthopedic Surgeon · Hip &amp; Knee Replacement
+                </p>
+                <p className="text-brand-500">
+                  Last reviewed:{" "}
+                  {new Date(article.lastReviewed + "T12:00:00Z").toLocaleDateString(
+                    "en-US",
+                    { month: "long", year: "numeric" }
+                  )}
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="mt-6 text-sm">
               <p className="font-semibold text-brand-900">
-                Medically reviewed by{" "}
+                Published by{" "}
                 <Link href="/about" className="underline hover:text-brand-600">
-                  {doctor.name}
+                  {doctor.practice}
                 </Link>
               </p>
-              <p className="text-brand-600">
-                Board-Certified Orthopedic Surgeon · Hip &amp; Knee Replacement
-              </p>
               <p className="text-brand-500">
-                Last reviewed:{" "}
+                Last updated:{" "}
                 {new Date(article.lastReviewed + "T12:00:00Z").toLocaleDateString(
                   "en-US",
                   { month: "long", year: "numeric" }
                 )}
+                {" · "}General education, not individual medical advice.
               </p>
             </div>
-          </div>
+          )}
         </Container>
       </section>
 
